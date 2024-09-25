@@ -1,4 +1,4 @@
-# Meeting Minutes 
+# Team 9 Meeting Minutes 
 ## Meeting Details:
 ### Date: 
 October 2, 2024
