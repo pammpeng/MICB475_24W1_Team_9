@@ -9,3 +9,4 @@ Claire Rollins, Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng
 1. Present datasets and provide update/discuss 
 2. Brainstorm research question
 3. Ask everyone their horoscopes
+4. Questions and concerns?
