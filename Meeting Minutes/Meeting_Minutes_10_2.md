@@ -3,9 +3,12 @@
 ### Date: 
 October 2, 2024
 ### Participants: 
-Claire Rollins, Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng
+Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng
+### Absentees: Claire Rollins
 
 ## Agenda Items
-1. Present datasets and provide update/discuss 
-2. Brainstorm research question
-3. Questions and concerns?
+1. Research Area Ideas:
+  - Nasal Microbiome and Asthma in different countries, socioeconomic status, living conditions
+   - MS, Asthma, as well as ethnicity correlation not good enough?
+3. Brainstorm/narrow down research question
+4. Questions and concerns?
