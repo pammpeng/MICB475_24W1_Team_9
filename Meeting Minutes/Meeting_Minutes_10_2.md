@@ -20,5 +20,6 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng
 
 Link to document with possible datasets: https://docs.google.com/document/d/1yV2v-xm3Y2zUjSDU6DhI1xWOvH8VZ7FDswyeJf18VB8/edit?usp=sharing
 3. Brainstorm/narrow down research question
+  - Is the microbiome a mediator of the increased prevalence of Asthma in patients with MS compared to the general public?
 4. Meeting online next week!
 
