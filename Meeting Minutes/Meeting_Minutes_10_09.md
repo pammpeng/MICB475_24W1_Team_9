@@ -1,6 +1,7 @@
 # Team 9 Meeting Minutes 
 # Meeting Details:
-## Date: October 9th, 2024
+## Date: 
+October 9th, 2024
 
 ## Participants:
 Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
