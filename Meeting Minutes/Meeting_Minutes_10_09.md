@@ -17,6 +17,7 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
     - Are there any variables missing that would be valuable for our analysis?
           - We haven't included MS treatment variables
     - Are there any variables retained that are not important for the analysis?
+          - We wanted to keep variables that would have potential impacts on the microbiome.
     - Concerns: how do we control for confounding variables?
     - There aren't duplicates for every sample - should we filter out the duplicates?
  - MS + asthma prevalence
