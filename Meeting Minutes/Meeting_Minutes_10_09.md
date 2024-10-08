@@ -18,7 +18,7 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
           - We haven't included MS treatment variables
     - Are there any variables retained that are not important for the analysis?
     - Concerns: how do we control for confounding variables?
- - MS prevalence
+ - MS + asthma prevalence
     - 76% RRMS (437/576)
     - PMS: 12% SPMS (68/576) + 12% PPMS (71/576)
     - 2 patients with PPMS have asthma
