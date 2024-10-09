@@ -20,8 +20,7 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
     - Are there any variables retained that are not important for the analysis?
           - We wanted to keep variables that would have potential impacts on the microbiome.
           - Hans: Too much, narrow down research question (literature review) to learn about which variables we want to investigate and start writing background and introduction
-  - 3 Aims (what we want to do to achieve our research question): Have meaningful link and story from one aim to the next
-        1. E.g: Taxnomic analysis of microbiome of MS people vs Non-MS people 
+  - 3 Aims (what we want to do to achieve our research question): Have meaningful link and story from one aim to the next. E.g: Taxnomic analysis of microbiome of MS people vs Non-MS people 
     - Concerns: how do we control for confounding variables?
       2. Determing if there is a difference between those with Asthma and non-asthma
         - Hans: removing confounding variables that do not meet criteria. Run correct statistical analysis. No need to do all variables, only do the ones interested in. Have a targeted approach, choosing a variable from a literature review.
