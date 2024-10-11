@@ -8,9 +8,15 @@ ms_data
 #Renaming sample ID column
 colnames(ms_data)[1] <- "sample_id" 
 
+#filtering for healthy and asthma
+
 #Selecting for MS and asthma
 selected <- select(ms_data, sample_id, disease_course, asthma)
 selected
+
+#filtering for healthy and asthma
+filtered_asthma <- filter(selected, disease_course == "Control", asthma == 1)
+filtered_asthma
 
 #Filtering for PPMS 
 filtered_PPMS <- filter(selected, disease_course == "PPMS")
@@ -35,3 +41,4 @@ rrms_asthma_filtered_unique
 #Counting the number of rows from both RRMS and PPMS + asthma
 nrow(rrms_asthma_filtered_unique)
 nrow(filtered_PPMS_asthma)
+nrow(filtered_asthma)
