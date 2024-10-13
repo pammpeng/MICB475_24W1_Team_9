@@ -1,9 +1,12 @@
 library(tidyverse)
 library(readxl)
+library(dplyr)
 #Loading data
 data <- "ms_metadata.xlsx"
 ms_data <- read_excel(data)
 ms_data
+
+#### Preliminary Filtering to Determine Sample Size ####
 
 #Renaming sample ID column
 colnames(ms_data)[1] <- "sample_id" 
@@ -42,3 +45,31 @@ rrms_asthma_filtered_unique
 nrow(rrms_asthma_filtered_unique)
 nrow(filtered_PPMS_asthma)
 nrow(filtered_asthma)
+
+#### Removing Unwanted Variables and Selecting Samples for Analysis ####
+# remove duplicates from data 
+ms_no_dbl <- unique(ms_data)
+
+#remove unwanted variables 
+ms_clean <- select(ms_no_dbl, "sample_id","site_x","sex","age","bmi",
+                   "disease_course","disease_duration","treatment_status",
+                   "treatments","administration","MSSS","dmt","birth_method",
+                   "breastfeeding","allergies","asthma","ms_family","nsaids",
+                   "smoke","education","occupation","vitamin D (IU)")
+
+#create RRMS and asthma group 
+rrms_asthma <- filter(ms_clean, disease_course =="RRMS", asthma == 1)
+
+#create RRMS, no asthma group 
+set.seed(9)
+rrms_no_asthma <- filter(ms_clean, disease_course =="RRMS", asthma ==0) %>%
+  sample_n(38)
+
+#create healthy, asthma group 
+healthy_asthma <- filter(ms_clean, disease_course =="Control", asthma ==1) %>%
+  sample_n(38)
+
+#create healthy, no asthma group 
+healthy_no_asthma <- filter(ms_clean, disease_course =="Control", asthma ==0) %>%
+  sample_n(38)
+
