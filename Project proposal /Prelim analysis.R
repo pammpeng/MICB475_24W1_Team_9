@@ -73,3 +73,11 @@ healthy_asthma <- filter(ms_clean, disease_course =="Control", asthma ==1) %>%
 healthy_no_asthma <- filter(ms_clean, disease_course =="Control", asthma ==0) %>%
   sample_n(38)
 
+#combine all 4 groups into 1 data frame
+ms_final_dat <- full_join(rrms_asthma, rrms_no_asthma) %>%
+  full_join(healthy_asthma) %>%
+  full_join(healthy_no_asthma)
+  
+#export the final data frame as a tsv file and a csv file
+write_delim(ms_final_dat, "ms_metadata_final.tsv", delim = "\t")
+write_delim(ms_final_dat, "ms_metadata_final.csv", delim = ",")
