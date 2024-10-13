@@ -1,0 +1,153 @@
+sample_id,site_x,sex,age,bmi,disease_course,disease_duration,treatment_status,treatments,administration,MSSS,dmt,birth_method,breastfeeding,allergies,asthma,ms_family,nsaids,smoke,education,occupation,vitamin D (IU)
+71401-0072,San Francisco,F,56,47.30405955,RRMS,22,Treated,Interferon,Subcutaneous,2.58,1,Vaginal Delivery,1,1,1,0,1,nonsmoker,College/University Degree,finance/customer servie,314.29
+71401-0080,San Francisco,F,47,20.68369399,RRMS,9,Untreated,Untreated,Untreated,1.28,0,Vaginal Delivery,0,0,1,0,1,smoker,Post-Graduate Education,University Administrator/Teacher,600
+71401-0094,San Francisco,F,55,29.65343307,RRMS,39,Untreated,Untreated,Untreated,0.07,0,Vaginal Delivery,0,1,1,0,1,nonsmoker,College/University Degree,"accountant during tax season, raspberry farming during remainder of the year",600
+71401-0101,San Francisco,F,42,39.44636678,RRMS,6,Treated,Dimethyl fumarate,Oral,1.67,1,Caesarean Section,0,1,1,0,1,formersmoker,Some College/Technical Degree,Executive Assistant,200
+71401-0102,San Francisco,F,61,31.69550173,RRMS,39,Untreated,Untreated,Untreated,1.26,0,Vaginal Delivery,1,0,1,1,0,nonsmoker,Some College/Technical Degree,Caregiver for daughter,0
+71401-0114,San Francisco,M,62,24.40857925,RRMS,29,Treated,ocrevus(rituxan),Infused,7.23,1,Vaginal Delivery,1,1,1,1,1,nonsmoker,Post-Graduate Education,retired,600
+71401-0116,San Francisco,F,53,31.30482208,RRMS,28,Treated,Fingolimod,Oral,1.76,1,Vaginal Delivery,1,1,1,0,0,nonsmoker,Some College/Technical Degree,retired + part time reader/assistant,400
+71401-0165,San Francisco,F,45,41.75719182,RRMS,18,Untreated,Untreated,Untreated,1.77,0,Caesarean Section,1,1,1,1,1,formersmoker,Post-Graduate Education,Visual Designer,142.86
+71401-0170,San Francisco,M,48,25.10963899,RRMS,16,Treated,Glatiramer acetate,Subcutaneous,1.3,1,Vaginal Delivery,1,1,1,0,0,nonsmoker,College/University Degree,Filmmaker,600
+71401-0181,San Francisco,F,40,23.29696849,RRMS,10,Untreated,Untreated,Untreated,2.97,0,Vaginal Delivery,0,1,1,0,1,nonsmoker,Post-Graduate Education,nonprofit program director,NA
+71401-0210,San Francisco,F,44,25.40389236,RRMS,14,Untreated,Untreated,Untreated,0.85,0,Vaginal Delivery,1,1,1,1,0,formersmoker,College/University Degree,Homemaker,NA
+71401-0244,San Francisco,F,54,24.36875795,RRMS,18,Treated,Glatiramer acetate,Subcutaneous,1.77,1,Vaginal Delivery,NA,1,1,0,1,formersmoker,Post-Graduate Education,Massage therapist,NA
+71401-0248,San Francisco,F,62,21.46649737,RRMS,10,Treated,Glatiramer acetate,Subcutaneous,2.97,1,Vaginal Delivery,0,1,1,0,0,nonsmoker,Post-Graduate Education,veterinarian and college teacher,200
+71501-0014,Boston,F,44,30.30301919,RRMS,19,Treated,Interferon,Subcutaneous,0.15,1,Vaginal Delivery,1,1,1,1,1,nonsmoker,Post-Graduate Education,Nurse practitioner,600
+71501-0019,Boston,F,63,31.2742561,RRMS,17,Untreated,Untreated,Untreated,1.84,0,Vaginal Delivery,0,1,1,0,0,formersmoker,Post-Graduate Education,disabled,200
+71501-0036,Boston,M,52,25.0888812,RRMS,5,Treated,Natalizumab,Infused,1.88,1,Vaginal Delivery,1,0,1,0,0,nonsmoker,Post-Graduate Education,Business owner,NA
+71501-0045,Boston,F,29,28.05697693,RRMS,1,Treated,Dimethyl fumarate,Oral,2.71,1,Vaginal Delivery,0,1,1,0,0,nonsmoker,Post-Graduate Education,physical therapist,200
+71601-0044,New York,F,30,18.39923035,RRMS,7,Treated,Dimethyl fumarate,Oral,0.46,1,Caesarean Section,0,0,1,0,1,nonsmoker,Post-Graduate Education,game designer,200
+71601-0067,New York,M,30,22.59531608,RRMS,9,Treated,Fingolimod,Oral,2.19,1,Vaginal Delivery,1,1,1,0,1,formersmoker,Post-Graduate Education,mental health therapist,142.86
+71601-0110,New York,F,48,24.32941717,RRMS,20,Treated,Interferon,Subcutaneous,0.14,1,NA,NA,0,1,1,0,formersmoker,Post-Graduate Education,teacher,0
+71601-0143,New York,M,41,26.58217877,RRMS,13,Treated,Dimethyl fumarate,Oral,2.48,1,NA,NA,1,1,0,1,formersmoker,College/University Degree,"producer, television marketing",200
+71701-0048,Edinburgh,F,50,28.06506341,RRMS,3,Untreated,Untreated,Untreated,7.45,0,Vaginal Delivery,0,1,1,1,1,smoker,College/University Degree,Senior care and community worker,600
+71701-0079,Edinburgh,F,45,26.13703332,RRMS,18,Treated,Glatiramer acetate,Subcutaneous,5.52,1,Vaginal Delivery,1,1,1,0,1,smoker,College/University Degree,Retired,600
+71701-0098,Edinburgh,F,49,29.76083761,RRMS,14,Untreated,Untreated,Untreated,3.13,0,Vaginal Delivery,0,1,1,0,0,nonsmoker,College/University Degree,Cafe Manager,428.57
+71701-0104,Edinburgh,F,51,32.39751172,RRMS,30,Untreated,Untreated,Untreated,0.89,0,Vaginal Delivery,NA,0,1,0,0,nonsmoker,Some College/Technical Degree,Speech and language technical instructor,NA
+71701-0169,Edinburgh,F,57,25.54798514,RRMS,23,Untreated,Untreated,Untreated,0.11,0,Vaginal Delivery,1,1,1,0,1,nonsmoker,College/University Degree,Retired,200
+71801-0043,Buenos Aires,M,40,24.16326531,RRMS,4,Treated,Fingolimod,Oral,0.64,1,NA,NA,0,1,0,1,smoker,College/University Degree,administrative,0
+71801-0050,Buenos Aires,M,34,23.87511478,RRMS,6,Treated,Fingolimod,Oral,1.67,1,Vaginal Delivery,1,1,1,1,1,smoker,High School Graduate,driver,0
+71801-0054,Buenos Aires,M,29,21.60493827,RRMS,4,Treated,Glatiramer acetate,Subcutaneous,2.09,1,Vaginal Delivery,1,0,1,0,1,nonsmoker,High School Graduate,administrative,0
+71801-0071,Buenos Aires,F,50,29.76086271,RRMS,14,Treated,Fingolimod,Oral,5.29,1,Vaginal Delivery,1,1,1,0,0,smoker,College/University Degree,house wife,0
+71801-0072,Buenos Aires,F,49,19.81405274,RRMS,10,Untreated,Untreated,Untreated,2.05,0,Vaginal Delivery,1,0,1,0,1,formersmoker,College/University Degree,administrative,0
+71801-0077,Buenos Aires,F,40,26.89767019,RRMS,12,Treated,Fingolimod,Oral,0.27,1,Caesarean Section,NA,1,1,0,1,nonsmoker,Post-Graduate Education,veterinarian (public health),600
+71801-0081,Buenos Aires,F,39,22.30814991,RRMS,11,Treated,Interferon,Subcutaneous,0.31,1,NA,NA,0,1,0,1,nonsmoker,College/University Degree,administrative,0
+71801-0108,Buenos Aires,F,38,26.25958475,RRMS,0,Treated,Glatiramer acetate,Subcutaneous,2.83,1,Vaginal Delivery,1,1,1,0,0,formersmoker,Some College/Technical Degree,administrative,0
+76401-0009,San Sebastian,F,43,18.81892431,RRMS,26,Untreated,Untreated,Untreated,3.86,0,Vaginal Delivery,1,1,1,0,0,formersmoker,College/University Degree,technician,200
+76401-0013,San Sebastian,M,55,27.15271059,RRMS,11,Treated,Interferon,Subcutaneous,5.82,1,Vaginal Delivery,1,0,1,0,0,formersmoker,High School Graduate,retired,0
+76401-0040,San Sebastian,F,38,21.87755102,RRMS,11,Untreated,Untreated,Untreated,0.31,0,Vaginal Delivery,1,1,1,0,0,formersmoker,Some College/Technical Degree,shop assistant,57.14
+76401-0046,San Sebastian,F,50,30.11621315,RRMS,21,Treated,Interferon,Subcutaneous,0.97,1,Vaginal Delivery,1,1,1,1,1,formersmoker,Some College/Technical Degree,butcher,685.71
+71801-0047,Buenos Aires,F,56,19.15119182,RRMS,21,Untreated,Untreated,Untreated,0.14,0,Vaginal Delivery,0,0,0,1,1,smoker,College/University Degree,psychologist,0
+71401-0259,San Francisco,F,67,22.63136597,RRMS,13,Treated,Glatiramer acetate,Subcutaneous,4.13,1,Vaginal Delivery,1,1,0,0,1,nonsmoker,College/University Degree,retired,0
+76401-0005,San Sebastian,F,33,25.20398137,RRMS,6,Treated,Fingolimod,Oral,7.07,1,Vaginal Delivery,1,1,0,1,0,nonsmoker,College/University Degree,teacher,0
+71601-0027,New York,F,38,21.34281612,RRMS,15,Treated,Natalizumab,Infused,0.21,1,NA,NA,0,0,0,0,nonsmoker,Some College/Technical Degree,homemaker,0
+71401-0075,San Francisco,F,51,29.89501533,RRMS,15,Treated,Natalizumab,Infused,2.85,1,Vaginal Delivery,1,1,0,0,1,nonsmoker,College/University Degree,Not currently working,200
+71701-0121,Edinburgh,F,34,26.953125,RRMS,4,Untreated,Untreated,Untreated,0.64,0,Vaginal Delivery,1,1,0,0,0,nonsmoker,College/University Degree,Artist,200
+71401-0184,San Francisco,F,60,25.28243509,RRMS,22,Treated,Glatiramer acetate,Subcutaneous,0.89,1,NA,NA,0,0,0,0,nonsmoker,College/University Degree,Real Estate Agent,0
+71401-0229,San Francisco,F,63,20.5264792,RRMS,22,Untreated,Untreated,Untreated,2.58,0,Vaginal Delivery,NA,0,0,0,0,formersmoker,Some College/Technical Degree,Technical writer,200
+71401-0204,San Francisco,M,63,26.57148171,RRMS,3,Untreated,Untreated,Untreated,2.29,0,Vaginal Delivery,1,0,0,0,0,nonsmoker,Post-Graduate Education,Attorney,NA
+76401-0026,San Sebastian,M,43,29.05328798,RRMS,3,Treated,Glatiramer acetate,Subcutaneous,0.7,1,Vaginal Delivery,0,0,0,0,0,nonsmoker,Some College/Technical Degree,carpenter,0
+76401-0035,San Sebastian,M,41,22.12619742,RRMS,8,Treated,Dimethyl fumarate,Oral,3.41,1,Caesarean Section,1,0,0,0,0,smoker,College/University Degree,teacher,0
+71401-0226,San Francisco,F,67,26.54274334,RRMS,45,Treated,Fingolimod,Oral,0.56,1,Vaginal Delivery,1,1,0,0,0,nonsmoker,Post-Graduate Education,Consultant,200
+71801-0126,Buenos Aires,F,28,21.30394858,RRMS,1,Treated,Fingolimod,Oral,0.86,1,Caesarean Section,1,0,0,0,0,nonsmoker,College/University Degree,biochemist,57.14
+71401-0201,San Francisco,F,38,29.39195797,RRMS,8,Untreated,Untreated,Untreated,3.41,0,Vaginal Delivery,0,0,0,0,0,formersmoker,Some College/Technical Degree,Cashier,NA
+71501-0015,Boston,F,55,35.93769975,RRMS,7,Treated,Fingolimod,Oral,0.46,1,Vaginal Delivery,0,1,0,0,0,formersmoker,College/University Degree,Planner Buyer,200
+71801-0120,Buenos Aires,M,35,30.55681304,RRMS,5,Treated,Fingolimod,Oral,0.56,1,Vaginal Delivery,0,0,0,0,1,formersmoker,Some College/Technical Degree,administrative,0
+76401-0021,San Sebastian,F,59,33.32756233,RRMS,23,Treated,Natalizumab,Infused,4.15,1,Vaginal Delivery,0,0,0,0,0,formersmoker,High School Graduate,homemaker,600
+71401-0175,San Francisco,F,62,27.43843527,RRMS,15,Treated,Interferon,Subcutaneous,2.1,1,Vaginal Delivery,0,1,0,0,1,formersmoker,Some College/Technical Degree,Self-employed full time,200
+71701-0136,Edinburgh,F,47,19.140625,RRMS,10,Treated,Dimethyl fumarate,Oral,4.72,1,Vaginal Delivery,1,0,0,0,0,nonsmoker,College/University Degree,Project manager,200
+71801-0084,Buenos Aires,M,46,25.56495392,RRMS,14,Treated,Interferon,Subcutaneous,0.23,1,Vaginal Delivery,1,0,0,0,1,smoker,College/University Degree,administrative,0
+71401-0133,San Francisco,M,65,19.89773557,RRMS,42,Untreated,Untreated,Untreated,2.23,0,Vaginal Delivery,0,0,0,0,0,nonsmoker,College/University Degree,Retired RN,200
+71801-0024,Buenos Aires,F,41,23.54788069,RRMS,2,Treated,Interferon,Subcutaneous,0.8,1,Vaginal Delivery,1,0,0,0,1,nonsmoker,College/University Degree,indutrial designes,0
+71701-0081,Edinburgh,M,54,25.47845142,RRMS,5,Untreated,Untreated,Untreated,8.17,0,Vaginal Delivery,1,0,0,0,0,formersmoker,College/University Degree,Packer/operator,0
+71801-0020,Buenos Aires,M,26,22.74338374,RRMS,4,Treated,Interferon,Subcutaneous,0.64,1,Caesarean Section,1,0,0,0,1,nonsmoker,College/University Degree,digital marketing,0
+71701-0065,Edinburgh,F,40,30.53114387,RRMS,15,Treated,Dimethyl fumarate,Oral,1.39,1,Vaginal Delivery,1,0,0,1,0,formersmoker,Post-Graduate Education,Psychologist,0
+71801-0078,Buenos Aires,M,53,19.60715661,RRMS,12,Treated,Interferon,Subcutaneous,3.54,1,NA,NA,0,0,0,1,nonsmoker,College/University Degree,pharmaceutical,200
+71701-0117,Edinburgh,F,47,31.91222346,RRMS,4,Treated,Dimethyl fumarate,Oral,6.35,1,Vaginal Delivery,1,0,0,0,0,formersmoker,Some College/Technical Degree,Store manager  off sick for past year,0
+71801-0111,Buenos Aires,M,55,22.28259211,RRMS,9,Treated,Glatiramer acetate,Subcutaneous,0.36,1,Vaginal Delivery,NA,1,0,0,0,formersmoker,College/University Degree,engineer,0
+71801-0049,Buenos Aires,F,37,24.03460984,RRMS,3,Treated,Fingolimod,Oral,0.7,1,Vaginal Delivery,1,0,0,0,0,formersmoker,College/University Degree,speech therapist,0
+71401-0245,San Francisco,F,55,25.08789295,RRMS,14,Treated,Glatiramer acetate,Subcutaneous,2.3,1,Vaginal Delivery,1,1,0,0,1,nonsmoker,Post-Graduate Education,school librarian,142.86
+71401-0228,San Francisco,M,31,37.65698862,RRMS,1,Treated,ocrevus(rituxan),Infused,7.4,1,Caesarean Section,1,1,0,0,1,formersmoker,Some College/Technical Degree,General Engineering Contractor,800
+71601-0046,New York,F,24,24.44310759,RRMS,1,Untreated,Untreated,Untreated,5.45,0,Vaginal Delivery,1,0,0,0,0,nonsmoker,High School Graduate,retail manager,NA
+71801-0031,Buenos Aires,F,32,19.53125,RRMS,2,Treated,Interferon,Subcutaneous,0.8,1,Caesarean Section,1,0,0,0,1,formersmoker,Post-Graduate Education,marketing,0
+71401-0171,San Francisco,F,37,19.82860626,RRMS,0,Treated,ocrevus(rituxan),Infused,7.58,1,Vaginal Delivery,1,1,0,0,1,formersmoker,Post-Graduate Education,unemployed,400
+71401-0144,San Francisco,F,39,25.97278507,RRMS,8,Treated,Dimethyl fumarate,Oral,3.41,1,Vaginal Delivery,1,0,0,0,0,formersmoker,College/University Degree,IT in medical company,600
+71401-0260,San Francisco,F,56,27.38588563,RRMS,32,Treated,ocrevus(rituxan),Infused,1.26,1,Vaginal Delivery,1,0,0,1,1,formersmoker,College/University Degree,Unemployed accountant,200
+71601-0124,New York,F,40,27.9550855,RRMS,2,Untreated,Untreated,Untreated,5.23,0,Vaginal Delivery,1,0,0,1,1,nonsmoker,College/University Degree,chemist,600
+71801-0144,Buenos Aires,M,36,22.94811574,RRMS,4,Treated,Dimethyl fumarate,Oral,0.64,1,Vaginal Delivery,1,0,0,0,1,nonsmoker,Some College/Technical Degree,administrative,0
+71602-0003,New York,M,70,21.79494155,Control,NA,Control,Control,Control,0,NA,NA,NA,0,1,0,0,formersmoker,College/University Degree,retired,200
+71802-0089,Buenos Aires,M,47,29.06122449,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,1,0,0,formersmoker,College/University Degree,agronomist,0
+71402-0165,San Francisco,F,42,40.12031693,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,1,1,0,1,formersmoker,Post-Graduate Education,"Public Health, and freelance writer + designer",400
+71402-0254,San Francisco,F,55,35.86622232,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,College/University Degree,Aquatics Director - community pool,600
+71802-0046,Buenos Aires,F,38,21.49028551,Control,NA,Control,Control,Control,0,NA,Caesarean Section,1,0,1,0,0,formersmoker,High School Graduate,administrative,0
+71702-0169,Edinburgh,M,58,21.96291365,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,Some College/Technical Degree,Retired,200
+71402-0141,San Francisco,F,67,28.19168704,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,1,1,0,0,nonsmoker,Post-Graduate Education,Retired,142.86
+71702-0076,Edinburgh,F,48,37.80356934,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,1,0,0,formersmoker,High School Graduate,Office worker,457.14
+71802-0126,Buenos Aires,M,28,21.96712018,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,College/University Degree,pharmaceutical,0
+71602-0162,New York,F,56,21.2568339,Control,NA,Control,Control,Control,0,NA,NA,NA,0,1,0,1,nonsmoker,Post-Graduate Education,librarian,600
+76402-0009,San Sebastian,M,49,21.46193662,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,1,0,0,formersmoker,College/University Degree,public notary,0
+71802-0142,Buenos Aires,M,37,27.16691927,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,formersmoker,High School Graduate,MIlitary,NA
+71802-0106,Buenos Aires,M,31,46.2962963,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,High School Graduate,administrative,0
+71502-0029,Boston,F,50,28.87168788,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,1,nonsmoker,College/University Degree,business systems analyst,314.29
+71502-0039,Boston,M,56,25.37790258,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,1,0,0,nonsmoker,College/University Degree,Financial advisor,200
+71402-0147,San Francisco,M,59,36.91813727,Control,NA,Control,Control,Control,0,NA,NA,NA,1,1,0,0,nonsmoker,College/University Degree,policy consultant to public safety,0
+71602-0025,New York,M,67,30.58122085,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,1,1,0,1,nonsmoker,College/University Degree,partner at architectural firm (architectural conservator),285.71
+71402-0173,San Francisco,M,55,26.64711884,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,1,formersmoker,Post-Graduate Education,Podiatrist,0
+71402-0075,San Francisco,M,54,35.1542918,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,1,nonsmoker,College/University Degree,retired,0
+71702-0135,Edinburgh,M,35,24.04544854,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,1,0,smoker,College/University Degree,Camera operator,0
+71402-0170,San Francisco,F,50,25.96952909,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,Post-Graduate Education,physician executive,314.29
+71602-0141,New York,F,52,30.11356489,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,1,nonsmoker,Post-Graduate Education,physician,200
+71702-0161,Edinburgh,M,34,21.81092141,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,1,nonsmoker,College/University Degree,Geophysicist,0
+71702-0105,Edinburgh,M,52,43.74354339,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,Post-Graduate Education,Head of research computing,0
+76402-0039,San Sebastian,M,46,33.17260012,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,0,1,0,0,nonsmoker,College/University Degree,publicist,0
+71602-0052,New York,F,38,53.04042866,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,NA,1,1,0,0,formersmoker,High School Graduate,baker,0
+71402-0157,San Francisco,M,66,32.84236672,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,Some College/Technical Degree,Freelance Artist - Painter,0
+71802-0091,Buenos Aires,M,38,34.60207612,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,High School Graduate,technician,0
+71402-0091,San Francisco,M,63,23.29122996,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,1,1,1,smoker,Post-Graduate Education,"Executive Director & CEO, non-profit healthcare foundation",NA
+71402-0103,San Francisco,M,37,34.55553015,Control,NA,Control,Control,Control,0,NA,Caesarean Section,1,0,1,0,1,nonsmoker,College/University Degree,Territory Manager,0
+71402-0148,San Francisco,M,32,23.87821933,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,1,1,0,0,nonsmoker,College/University Degree,Software Program Manager,57.14
+71702-0130,Edinburgh,M,49,27.92048247,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,0,1,0,0,nonsmoker,Some College/Technical Degree,Service manager,0
+76402-0034,San Sebastian,M,42,30.33638487,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,Post-Graduate Education,risk prevention agent,0
+71502-0045,Boston,M,30,36.80437301,Control,NA,Control,Control,Control,0,NA,Caesarean Section,1,1,1,0,0,nonsmoker,College/University Degree,Workforce Management Analyst (Data Analyst),0
+71402-0189,San Francisco,F,40,22.70966894,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,College/University Degree,Senior Director of Strategic Operations,0
+76402-0001,San Sebastian,M,37,24.61810377,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,Some College/Technical Degree,sales agent,0
+71702-0082,Edinburgh,F,71,41.52249135,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,nonsmoker,College/University Degree,Music specialist,0
+76402-0032,San Sebastian,M,36,26.57030503,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,1,0,0,smoker,College/University Degree,cultural institution,0
+71802-0101,Buenos Aires,M,39,24.69135802,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,1,smoker,College/University Degree,administrative,0
+71702-0065,Edinburgh,M,57,23.27160494,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,formersmoker,College/University Degree,Social Worker,0
+71802-0053,Buenos Aires,F,40,23.12467037,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,0,0,0,1,formersmoker,Post-Graduate Education,lawyer,0
+71802-0133,Buenos Aires,M,47,31.28092183,Control,NA,Control,Control,Control,0,NA,NA,NA,1,0,0,0,nonsmoker,College/University Degree,lawyer,0
+71502-0010,Boston,M,22,28.12148481,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,1,1,nonsmoker,Post-Graduate Education,student,0
+71802-0048,Buenos Aires,F,45,17.30103806,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,NA,0,0,0,1,smoker,High School Graduate,merchant,0
+71702-0117,Edinburgh,M,51,30.28995589,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,0,0,0,0,nonsmoker,Post-Graduate Education,Public House Manager,0
+71402-0161,San Francisco,F,65,21.05420878,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,nonsmoker,College/University Degree,Technical Writer,200
+71602-0027,New York,M,53,27.2910605,Control,NA,Control,Control,Control,0,NA,NA,NA,0,0,0,0,nonsmoker,High School Graduate,butcher,285.71
+71802-0065,Buenos Aires,M,61,36.76341865,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,smoker,Post-Graduate Education,human resources manager,0
+71602-0022,New York,M,54,30.602875740000002,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,0,nonsmoker,College/University Degree,advertising,200
+71802-0005,Buenos Aires,F,43,22.98539751,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,smoker,High School Graduate,admnistrative,0
+71802-0107,Buenos Aires,F,27,21.3577956,Control,NA,Control,Control,Control,0,NA,NA,NA,0,0,0,1,formersmoker,Some College/Technical Degree,administrative,0
+71702-0172,Edinburgh,M,61,28.3134374,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,1,formersmoker,College/University Degree,Managing Director,0
+71502-0015,Boston,M,64,43.22675164,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,1,formersmoker,College/University Degree,Test engineer,200
+71402-0175,San Francisco,F,65,26.57105213,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,nonsmoker,College/University Degree,Commercial Pilot,0
+71802-0060,Buenos Aires,F,55,30.11937557,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,1,nonsmoker,Some College/Technical Degree,kindergarten teacher,0
+71702-0066,Edinburgh,M,60,25.95557851,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,0,formersmoker,College/University Degree,Alpaca breeder,0
+71802-0134,Buenos Aires,M,56,25.73708141,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,1,nonsmoker,Some College/Technical Degree,advertising,0
+71702-0148,Edinburgh,M,57,27.07768899,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,nonsmoker,Post-Graduate Education,Astrophysicist,0
+71702-0174,Edinburgh,F,48,24.54120499,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,0,0,0,0,nonsmoker,College/University Degree,University School Support Administrator,600
+71602-0084,New York,M,45,21.46525003,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,0,nonsmoker,College/University Degree,media executive,0
+71802-0052,Buenos Aires,F,60,21.36752137,Control,NA,Control,Control,Control,0,NA,NA,NA,0,0,0,0,formersmoker,Post-Graduate Education,MD,0
+71602-0110,New York,M,52,27.1429941,Control,NA,Control,Control,Control,0,NA,NA,NA,1,0,0,1,nonsmoker,College/University Degree,manager,0
+71602-0138,New York,M,46,32.07931431,Control,NA,Control,Control,Control,0,NA,NA,NA,0,0,0,1,nonsmoker,Post-Graduate Education,physician,NA
+71702-0098,Edinburgh,M,49,26.61625709,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,1,0,0,1,smoker,Some College/Technical Degree,Catering manager,600
+71402-0123,San Francisco,M,65,34.46550145,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,1,nonsmoker,Post-Graduate Education,Consulting Engineer,314.29
+76402-0012,San Sebastian,M,66,23.93948099,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,nonsmoker,Some College/Technical Degree,sales agent,0
+76402-0008,San Sebastian,M,63,27.04164413,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,formersmoker,Some College/Technical Degree,retired,0
+71702-0078,Edinburgh,M,47,27.71768524,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,formersmoker,College/University Degree,Quantity surveyor,0
+76402-0028,San Sebastian,M,57,27.73229978,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,formersmoker,Some High School,retired,114.29
+71402-0210,San Francisco,M,48,28.48082857,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,1,nonsmoker,College/University Degree,Land surveyor,NA
+71402-0190,San Francisco,F,66,20.74446503,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,formersmoker,Some College/Technical Degree,Retired,0
+71802-0074,Buenos Aires,F,40,27.68877813,Control,NA,Control,Control,Control,0,NA,NA,NA,0,0,0,0,nonsmoker,Post-Graduate Education,physician,0
+71402-0116,San Francisco,F,58,28.32187915,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,1,0,0,0,nonsmoker,College/University Degree,IT,0
+71602-0161,New York,M,53,29.29458019,Control,NA,Control,Control,Control,0,NA,NA,NA,0,0,0,1,nonsmoker,Post-Graduate Education,lawyer,400
+71502-0022,Boston,M,66,31.79950815,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,0,0,0,0,0,nonsmoker,Post-Graduate Education,retired,400
+71702-0131,Edinburgh,M,73,25.86344284,Control,NA,Control,Control,Control,0,NA,Vaginal Delivery,1,0,0,0,0,formersmoker,College/University Degree,Retired,0
