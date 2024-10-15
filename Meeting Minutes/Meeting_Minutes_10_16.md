@@ -23,7 +23,7 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
     - very significant association between sexes 
 - Metadata Update 
     - right now our metadata has 22 variables (including sample ID) and 152 samples 
-- Manifest file progress 
+- Manifest file progress: able to use the ms_manifest.tsv file from project_2 directory on class server. Is this okay?
 - Help with Proposed approach 
 - To Do for next week:
       
