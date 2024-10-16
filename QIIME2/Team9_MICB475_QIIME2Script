@@ -33,5 +33,5 @@ qiime feature-table summarize \
   --m-sample-metadata-file ms_metadata_final.tsv #Needs to change sample_id to sample-id
   
 qiime feature-table tabulate-seqs \
-  --i-data rep-seqs.qza \
+  --i-data ms_rep-seqs.qza \
   --o-visualization rep-seqs.qzv
