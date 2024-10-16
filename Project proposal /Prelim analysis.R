@@ -8,13 +8,10 @@ ms_data
 
 #### Preliminary Filtering to Determine Sample Size ####
 
-#Renaming sample ID column
-colnames(ms_data)[1] <- "sample_id" 
-
 #filtering for healthy and asthma
 
 #Selecting for MS and asthma
-selected <- select(ms_data, sample_id, disease_course, asthma)
+selected <- select(ms_data, sample-id, disease_course, asthma)
 selected
 
 #filtering for healthy and asthma
@@ -51,7 +48,7 @@ nrow(filtered_asthma)
 ms_no_dbl <- unique(ms_data)
 
 #remove unwanted variables 
-ms_clean <- select(ms_no_dbl, "sample_id","site_x","sex","age","bmi",
+ms_clean <- select(ms_no_dbl, "sample-id","site_x","sex","age","bmi",
                    "disease_course","disease_duration","treatment_status",
                    "treatments","administration","MSSS","dmt","birth_method",
                    "breastfeeding","allergies","asthma","ms_family","nsaids",

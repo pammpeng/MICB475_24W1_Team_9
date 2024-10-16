@@ -1,4 +1,4 @@
-sample_id,site_x,sex,age,bmi,disease_course,disease_duration,treatment_status,treatments,administration,MSSS,dmt,birth_method,breastfeeding,allergies,asthma,ms_family,nsaids,smoke,education,occupation,vitamin D (IU)
+sample-id,site_x,sex,age,bmi,disease_course,disease_duration,treatment_status,treatments,administration,MSSS,dmt,birth_method,breastfeeding,allergies,asthma,ms_family,nsaids,smoke,education,occupation,vitamin D (IU)
 71401-0072,San Francisco,F,56,47.30405955,RRMS,22,Treated,Interferon,Subcutaneous,2.58,1,Vaginal Delivery,1,1,1,0,1,nonsmoker,College/University Degree,finance/customer servie,314.29
 71401-0080,San Francisco,F,47,20.68369399,RRMS,9,Untreated,Untreated,Untreated,1.28,0,Vaginal Delivery,0,0,1,0,1,smoker,Post-Graduate Education,University Administrator/Teacher,600
 71401-0094,San Francisco,F,55,29.65343307,RRMS,39,Untreated,Untreated,Untreated,0.07,0,Vaginal Delivery,0,1,1,0,1,nonsmoker,College/University Degree,"accountant during tax season, raspberry farming during remainder of the year",600
