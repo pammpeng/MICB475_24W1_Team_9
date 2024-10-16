@@ -2,7 +2,7 @@
 qiime tools import \
   --type "SampleData[SequencesWithQuality]" \
   --input-format SingleEndFastqManifestPhred33V2 \
-  --input-path /mnt/datasets/project_2/MS/ms_manifest.tsv \
+  --input-path filtered_ms_manifest.tsv \
   --output-path demux_seqs.qza
 
 #Visualization of Demultiplexed sequence file (.qza to .qzv)
