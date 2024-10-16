@@ -12,7 +12,7 @@ qiime demux summarize \
 
 # Denoising using DADA2 Tool
 qiime dada2 denoise-single \
---i-demultiplexed-seqs ms_demux_seqs.qza \
+--i-demultiplexed-seqs demux_seqs.qza \
 --p-trim-left 0 \
 --p-trunc-len 150 \
 --o-representative-sequences ms_rep-seqs.qza \
