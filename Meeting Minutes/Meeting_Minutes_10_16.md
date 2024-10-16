@@ -16,9 +16,9 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
     3. Explore further variables (socioeconomic status, education, genetics ms_family) as final figure
 - Discuss preliminary data analysis on societal factors 
     - p-value of 0.07 between control and MS population for social variables (education and occupation)
-        - is it worth keeping as an aim?
+        - is it worth keeping as an aim? No it is not
     - no significance between asthma and mode of delivery 
-        - could potentially look at microbiome composition?
+        - could potentially look at microbiome composition? And longitudinal dynamics
         - possible new aim of microbiome chnages in patients based on mode of delivery and prevalence of asthma and MS
     - very significant association between sexes 
 - Metadata Update 
