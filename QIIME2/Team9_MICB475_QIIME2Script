@@ -1,0 +1,37 @@
+#Using QIIME Tool to import sequences using manifest
+qiime tools import \
+  --type "SampleData[SequencesWithQuality]" \
+  --input-format SingleEndFastqManifestPhred33V2 \
+  --input-path /mnt/datasets/project_2/MS/ms_manifest.tsv \
+  --output-path demux_seqs.qza
+
+#Visualization of Demultiplexed sequence file (.qza to .qzv)
+qiime demux summarize \
+  --i-data demux_seqs.qza \
+  --o-visualization ms_demux_seqs.qzv
+
+# Denoising using DADA2 Tool
+qiime dada2 denoise-single \
+--i-demultiplexed-seqs demux_seqs.qza \
+--p-trim-left 0 \
+--p-trunc-len 150 \
+--o-representative-sequences ms_rep-seqs.qza \
+--o-table ms_table.qza \
+--o-denoising-stats ms_stats.qza
+
+# Visualize DADA2 stats
+qiime metadata tabulate \
+  --m-input-file ms_stats.qza \
+  --o-visualization ms_stats.qzv
+
+## Done up to this point -Pam ##
+
+# Visualize ASVs stats
+qiime feature-table summarize \
+  --i-table ms_table.qza \
+  --o-visualization ms_table.qzv \
+  --m-sample-metadata-file ms_metadata_final.tsv #Needs to change sample_id to sample-id
+  
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
