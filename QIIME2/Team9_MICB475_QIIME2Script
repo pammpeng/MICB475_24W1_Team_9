@@ -24,8 +24,6 @@ qiime metadata tabulate \
   --m-input-file ms_stats.qza \
   --o-visualization ms_stats.qzv
 
-## Done up to this point -Pam ##
-
 # Visualize ASVs stats
 qiime feature-table summarize \
   --i-table ms_table.qza \
@@ -35,3 +33,5 @@ qiime feature-table summarize \
 qiime feature-table tabulate-seqs \
   --i-data ms_rep-seqs.qza \
   --o-visualization rep-seqs.qzv
+
+### Done up to this point -PAM###
