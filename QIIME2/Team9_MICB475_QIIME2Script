@@ -35,3 +35,28 @@ qiime feature-table tabulate-seqs \
   --o-visualization rep-seqs.qzv
 
 ### Done up to this point -PAM###
+#### Option 2 Denoising, Truncate at 146 nts ####
+
+#Denoising using DADA2 
+qiime dada2 denoise-single \
+--i-demultiplexed-seqs demux_seqs.qza \
+--p-trim-left 0 \
+--p-trunc-len 146 \
+--o-representative-sequences ms_rep-seqs_2.qza \
+--o-table ms_table_2.qza \
+--o-denoising-stats ms_stats_2.qza
+
+# Visualize DADA2 stats
+qiime metadata tabulate \
+  --m-input-file ms_stats_2.qza \
+  --o-visualization ms_stats_2.qzv
+
+# Visualize ASVs stats
+qiime feature-table summarize \
+  --i-table ms_table_2.qza \
+  --o-visualization ms_table_2.qzv \
+  --m-sample-metadata-file ms_metadata_final.tsv 
+  
+qiime feature-table tabulate-seqs \
+  --i-data ms_rep-seqs_2.qza \
+  --o-visualization rep-seqs_2.qzv
