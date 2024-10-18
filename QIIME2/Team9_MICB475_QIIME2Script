@@ -60,3 +60,37 @@ qiime feature-table summarize \
 qiime feature-table tabulate-seqs \
   --i-data ms_rep-seqs_2.qza \
   --o-visualization rep-seqs_2.qzv
+
+#### Taxanomic Analysis ####
+
+# Extract V4 region from the Silva database 
+qiime feature-classifier extract-reads \
+  --i-sequences /mnt/datasets/silva_ref_files/silva-138-99-seqs.qza \
+  --p-f-primer GTGCCAGCMGCCGCGGTAA \
+  --p-r-primer GGACTACHVGGGTWTCTAAT \
+  --p-trunc-len 146 \
+  --o-reads ref-seqs-trimmed.qza
+
+# Train classifier with ref-seq file
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads ref-seqs-trimmed.qza \
+  --i-reference-taxonomy /mnt/datasets/silva_ref_files/silva-138-99-tax.qza \
+  --o-classifier classifier.qza
+
+#Assign taxonomy to reads 
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifier.qza \
+  --i-reads ms_rep-seqs_2.qza \
+  --o-classification taxonomy.qza
+
+# create taxonomy table 
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
+  
+# create taxonomy barplots
+qiime taxa barplot \
+  --i-table ms_table_2.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file /data/MS_data/ms_metadata_final.tsv \
+  --o-visualization taxa-bar-plots.qzv
