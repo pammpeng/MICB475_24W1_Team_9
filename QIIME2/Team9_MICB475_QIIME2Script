@@ -34,7 +34,7 @@ qiime feature-table tabulate-seqs \
   --i-data ms_rep-seqs.qza \
   --o-visualization rep-seqs_3.qzv
 
-### Train classifier ###
+#Train classifier 
 #Extract V4 16S region from Silva database 
 qiime feature-classifier extract-reads \
   --i-sequences /mnt/datasets/silva_ref_files/silva-138-99-seqs.qza \
