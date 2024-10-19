@@ -11,5 +11,5 @@ filtered_metadata_only_samples <- select(ms_metadata_final, `sample-id`)
 filtered_manifest <- left_join(filtered_metadata_only_samples, ms_manifest)
 
 # exporting the filtered_manifest to a TSV file
-filtered_manifest_filepath <- "filtered_ms_manifest.tsv"
+filtered_manifest_filepath <- "filtered_ms_manifest_2.tsv"
 write_tsv(filtered_manifest, filtered_manifest_filepath)

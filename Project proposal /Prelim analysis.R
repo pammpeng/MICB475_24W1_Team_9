@@ -48,11 +48,9 @@ nrow(filtered_asthma)
 ms_no_dbl <- unique(ms_data)
 
 #remove unwanted variables 
-ms_clean <- select(ms_no_dbl, "sample-id","site_x","sex","age","bmi",
-                   "disease_course","disease_duration","treatment_status",
-                   "treatments","administration","MSSS","dmt","birth_method",
-                   "breastfeeding","allergies","asthma","ms_family","nsaids",
-                   "smoke","education","occupation","vitamin D (IU)")
+ms_clean <- select(ms_no_dbl, "sample-id","sex","age",
+                   "disease_course","treatment_status",
+                   "asthma","smoke")
 
 #create RRMS and asthma group 
 rrms_asthma <- filter(ms_clean, disease_course =="RRMS", asthma == 1)
@@ -77,4 +75,4 @@ ms_final_dat <- full_join(rrms_asthma, rrms_no_asthma) %>%
   
 #export the final data frame as a tsv file and a csv file
 write_delim(ms_final_dat, "ms_metadata_final.tsv", delim = "\t")
-write_delim(ms_final_dat, "ms_metadata_final.csv", delim = ",")
+
