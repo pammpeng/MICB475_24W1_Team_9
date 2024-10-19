@@ -2,19 +2,19 @@
 qiime tools import \
   --type "SampleData[SequencesWithQuality]" \
   --input-format SingleEndFastqManifestPhred33V2 \
-  --input-path filtered_ms_manifest.tsv \
-  --output-path demux_seqs.qza
+  --input-path filtered_ms_manifest_2.tsv \
+  --output-path demux_seqs_.qza
 
 #Visualization of Demultiplexed sequence file (.qza to .qzv)
 qiime demux summarize \
-  --i-data demux_seqs.qza \
-  --o-visualization ms_demux_seqs.qzv
+  --i-data demux_seqs_.qza \
+  --o-visualization ms_demux_seqs_2.qzv
 
 # Denoising using DADA2 Tool
 qiime dada2 denoise-single \
---i-demultiplexed-seqs demux_seqs.qza \
+--i-demultiplexed-seqs demux_seqs_.qza \
 --p-trim-left 0 \
---p-trunc-len 151 \
+--p-trunc-len 139 \
 --o-representative-sequences ms_rep-seqs.qza \
 --o-table ms_table.qza \
 --o-denoising-stats ms_stats.qza
@@ -22,75 +22,15 @@ qiime dada2 denoise-single \
 # Visualize DADA2 stats
 qiime metadata tabulate \
   --m-input-file ms_stats.qza \
-  --o-visualization ms_stats.qzv
+  --o-visualization ms_stats_3.qzv
 
 # Visualize ASVs stats
 qiime feature-table summarize \
   --i-table ms_table.qza \
-  --o-visualization ms_table.qzv \
-  --m-sample-metadata-file ms_metadata_final.tsv #Needs to change sample_id to sample-id
+  --o-visualization ms_table_3.qzv \
+  --m-sample-metadata-file ms_metadata_final_2.tsv 
   
 qiime feature-table tabulate-seqs \
   --i-data ms_rep-seqs.qza \
-  --o-visualization rep-seqs.qzv
+  --o-visualization rep-seqs_3.qzv
 
-### Done up to this point -PAM###
-#### Option 2 Denoising, Truncate at 146 nts ####
-
-#Denoising using DADA2 
-qiime dada2 denoise-single \
---i-demultiplexed-seqs demux_seqs.qza \
---p-trim-left 0 \
---p-trunc-len 146 \
---o-representative-sequences ms_rep-seqs_2.qza \
---o-table ms_table_2.qza \
---o-denoising-stats ms_stats_2.qza
-
-# Visualize DADA2 stats
-qiime metadata tabulate \
-  --m-input-file ms_stats_2.qza \
-  --o-visualization ms_stats_2.qzv
-
-# Visualize ASVs stats
-qiime feature-table summarize \
-  --i-table ms_table_2.qza \
-  --o-visualization ms_table_2.qzv \
-  --m-sample-metadata-file ms_metadata_final.tsv 
-  
-qiime feature-table tabulate-seqs \
-  --i-data ms_rep-seqs_2.qza \
-  --o-visualization rep-seqs_2.qzv
-
-#### Taxanomic Analysis ####
-
-# Extract V4 region from the Silva database 
-qiime feature-classifier extract-reads \
-  --i-sequences /mnt/datasets/silva_ref_files/silva-138-99-seqs.qza \
-  --p-f-primer GTGCCAGCMGCCGCGGTAA \
-  --p-r-primer GGACTACHVGGGTWTCTAAT \
-  --p-trunc-len 146 \
-  --o-reads ref-seqs-trimmed.qza
-
-# Train classifier with ref-seq file
-qiime feature-classifier fit-classifier-naive-bayes \
-  --i-reference-reads ref-seqs-trimmed.qza \
-  --i-reference-taxonomy /mnt/datasets/silva_ref_files/silva-138-99-tax.qza \
-  --o-classifier classifier.qza
-
-#Assign taxonomy to reads 
-qiime feature-classifier classify-sklearn \
-  --i-classifier classifier.qza \
-  --i-reads ms_rep-seqs_2.qza \
-  --o-classification taxonomy.qza
-
-# create taxonomy table 
-qiime metadata tabulate \
-  --m-input-file taxonomy.qza \
-  --o-visualization taxonomy.qzv
-  
-# create taxonomy barplots
-qiime taxa barplot \
-  --i-table ms_table_2.qza \
-  --i-taxonomy taxonomy.qza \
-  --m-metadata-file /data/MS_data/ms_metadata_final.tsv \
-  --o-visualization taxa-bar-plots.qzv
