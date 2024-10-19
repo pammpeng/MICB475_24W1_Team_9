@@ -34,3 +34,64 @@ qiime feature-table tabulate-seqs \
   --i-data ms_rep-seqs.qza \
   --o-visualization rep-seqs_3.qzv
 
+### Train classifier ###
+#Extract V4 16S region from Silva database 
+qiime feature-classifier extract-reads \
+  --i-sequences /mnt/datasets/silva_ref_files/silva-138-99-seqs.qza \
+  --p-f-primer GTGCCAGCMGCCGCGGTAA \
+  --p-r-primer GGACTACHVGGGTWTCTAAT \
+  --p-trunc-len 139 \
+  --o-reads ref-seqs-trimmed.qza
+
+#Train classifier with new ref-seqs file
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads ref-seqs-trimmed.qza \
+  --i-reference-taxonomy /mnt/datasets/silva_ref_files/silva-138-99-tax.qza \
+  --o-classifier classifier.qza
+
+#Assign taxonomy to reads using trained classifier
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifier.qza \
+  --i-reads ms_rep-seqs.qza \
+  --o-classification taxonomy.qza
+
+#Visualize taxonomy table
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy_2.qzv
+  
+# Create taxonomy barplots
+qiime taxa barplot \
+  --i-table ms_table.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file /data/MS/ms_metadata_final_2.tsv \
+  --o-visualization taxa-bar-plots_2.qzv
+
+#Remove any non-bacterial features from table 
+qiime taxa filter-table \
+  --i-table ms_table.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-exclude mitochondria,chloroplast,archaea \
+  --o-filtered-table table-taxa-filtered.qza
+
+#Visualize features table
+qiime feature-table summarize \
+  --i-table table-taxa-filtered.qza \
+  --o-visualization table-taxa-filtered.qzv \
+  --m-sample-metadata-file /data/MS/ms_metadata_final_2.tsv
+
+#Generate a rooted and unrooted phylogenic tree 
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences ms_rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza
+
+#Alpha-rarefaction
+qiime diversity alpha-rarefaction \
+  --i-table ms_table.qza \
+  --i-phylogeny rooted-tree.qza \
+  --p-max-depth 27000 \
+  --m-metadata-file /data/MS/ms_metadata_final_2.tsv \
+  --o-visualization alpha-rarefaction.qzv
