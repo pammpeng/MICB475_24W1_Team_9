@@ -14,8 +14,8 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
           analysis.
     3. Conduct Functional Analysis to Explore Microbial Metabolic Pathways using PICRUSt2
 - Proposal debrief
-      - What went well?
-      - What could be improved for next time?
+    - What went well?
+    - What could be improved for next time?
 - Tasks already completed
     1. QIIME2 Processing
 - To-do for October 29th
