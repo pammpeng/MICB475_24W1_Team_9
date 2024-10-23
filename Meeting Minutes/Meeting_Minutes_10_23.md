@@ -18,4 +18,5 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 - To-do for October 29th
     1. Alpha and Beta diversity analysis
     2. Taxonomic analysis
+- Assign roles
 
