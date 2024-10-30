@@ -8,6 +8,8 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 
 ## Agenda Items
 - Proposal debrief and revision based on comments, receive feedback from Hans
+- Timeline? When should we submit revised version?
+- Should we revise our aims?
 - Tasks already completed
     1. QIIME2 Processing
 - To-do
