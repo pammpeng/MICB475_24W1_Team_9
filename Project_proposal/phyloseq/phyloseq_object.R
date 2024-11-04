@@ -13,6 +13,12 @@ otuFP <- "phyloseq/feature-table.txt"
 otu <- read.delim(file=otuFP, skip=1)
 otu
 
+print(colnames(otu))
+
+# Transform column names
+colnames(otu) <- gsub("X(\\d+)\\.(\\d+)", "\\1-\\2", colnames(otu))
+print(colnames(otu))
+
 taxonomy <- read.delim('phyloseq/taxonomy.tsv')
 taxonomy
 
@@ -23,11 +29,12 @@ class(phylo_tree)
 ##formatting otu matrix
 #saving everything except for the first line into a matrix
 otu_mat <- as.matrix(otu[,-1])
-
 otu_mat
+
 #Make first column (#OTU ID) the rownames of the new matrix
 rownames(otu_mat) <- otu$`X.OTU.ID`
 otu_mat
+
 
 # Use the "otu_table" function to make an OTU table
 OTU <- otu_table(otu_mat, taxa_are_rows = TRUE) 
@@ -68,3 +75,5 @@ TAX
 #### Create phyloseq object ####
 # Merge all into a phyloseq object
 mouse_phyloseq <- phyloseq(OTU, SAMP, TAX, phylo_tree)
+
+OTU 
