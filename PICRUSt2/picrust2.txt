@@ -14,5 +14,6 @@ qiime picrust2 full-pipeline \
   --p-hsp-method pic \
   --p-max-nsti 2 \
   --verbose
-  #STILL RUNNING ^ -Pam 4:43pm
+
+2 of 2754 ASVs were above the max NSTI cut-off of 2.0 and were removed from the downstream analyses.
 
