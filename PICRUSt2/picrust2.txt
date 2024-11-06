@@ -8,7 +8,7 @@ qiime feature-table filter-features \
 
 qiime picrust2 full-pipeline \
   --i-table feature-frequency-filtered-table.qza \
-  --i-seq ms_rep-seqs.qza \ #more than one rep-seqs 
+  --i-seq ms_rep-seqs.qza \ 
   --output-dir q2-picrust2_output \
   --p-placement-tool sepp \
   --p-hsp-method pic \
