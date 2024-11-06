@@ -12,4 +12,4 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
     
 - To-Do
   1. DESEQ2 -> Annie and Tia. Hans suggests AnCom or Aldex2 (log ratios) over DESEq2.
-  2. PICRUSt2 -> Asmita and Pam
+  2. PICRUSt2 -> Asmita and Pam Updates. Issues with R visualizations
