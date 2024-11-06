@@ -4,6 +4,8 @@ library(phyloseq)
 library(vegan)
 library(ape)
 
+getwd()
+
 #load in objects required for phyloseq object
 metafp <- "phyloseq/ms_metadata_final.tsv"
 metadata <- read_delim(metafp, delim="\t")
@@ -74,6 +76,6 @@ TAX
 
 #### Create phyloseq object ####
 # Merge all into a phyloseq object
-mouse_phyloseq <- phyloseq(OTU, SAMP, TAX, phylo_tree)
+ms_phyloseq <- phyloseq(OTU, SAMP, TAX, phylo_tree)
 
 OTU 
