@@ -84,7 +84,7 @@ abundance = abundance_data_filtered %>% filter(pathway %in% feature_with_p_0.05$
 colnames(abundance)[1] = "feature"
 abundance_desc = inner_join(abundance,metacyc_daa_annotated_results_df, by = "feature")
 abundance_desc$feature = abundance_desc$description
-#this line will change for each dataset. 34 represents the number of samples in the filtered abundance table
+#this line will change for each dataset. 151 represents the number of samples in the filtered abundance table
 abundance_desc = abundance_desc[,-c(151:ncol(abundance_desc))] 
 
 # Generate a heatmap
@@ -122,6 +122,4 @@ sig_res2<- ggplot(data = sig_res, aes(y = reorder(description, sort(as.numeric(l
 
 ggsave("sig_res.png", plot = sig_res2, width = 10, height = 6)
 
-#############################
-abundance <- abundance_desc %>% column_to_rownames("feature")
-str(abundance)
+
