@@ -16,6 +16,21 @@ phylo_dist <- pd(t(otu_table(ms_rare)), phy_tree(ms_rare),
 # add PD to metadata table
 sample_data(ms_rare)$PD <- phylo_dist$PD
 
+# Extract the grouping variable from sample data
+group_info <- sample_data(ms_rare)$group  # Replace 'group' with your actual grouping variable
+
+# Create a data frame with Faith's PD and the group info
+faith_pd_df <- data.frame(PD = sample_data(ms_rare)$PD, group = group_info)
+
+# Check the first few rows of the data frame
+head(faith_pd_df)
+
+# Perform Kruskal-Wallis test to compare PD across groups
+kruskal_test_result <- kruskal.test(PD ~ group, data = faith_pd_df)
+
+# Print the Kruskal-Wallis test result
+print(kruskal_test_result)
+
 # plot any metadata category against the PD
 plot.pd <- ggplot(sample_data(ms_rare), aes(group, PD), fill = group) + 
   geom_boxplot() +
