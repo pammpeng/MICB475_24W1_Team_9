@@ -7,8 +7,10 @@ library(ape)
 getwd()
 
 #load in objects required for phyloseq object
-metafp <- "phyloseq/ms_metadata_final.tsv"
+metafp <- "phyloseq/ms_metadata_final_2.tsv"
 metadata <- read_delim(metafp, delim="\t")
+
+metadata$asthma <- factor(metadata$asthma)
 metadata
 
 otuFP <- "phyloseq/feature-table.txt"

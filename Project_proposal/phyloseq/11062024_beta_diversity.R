@@ -8,12 +8,13 @@ bc_dm <- distance(ms_rare, method="bray")
 # check which methods you can specify
 ?distance
 
-pcoa_bc <- ordinate(mpt_rare, method="PCoA", distance=bc_dm)
+pcoa_bc <- ordinate(ms_rare, method="PCoA", distance=bc_dm)
 
-plot_ordination(mpt_rare, pcoa_bc, color = "body.site", shape="subject")
+plot_ordination(ms_rare, pcoa_bc, color = "asthma", shape = "disease_course")
 
-gg_pcoa <- plot_ordination(mpt_rare, pcoa_bc, color = "body.site", shape="subject") +
-  labs(pch="Subject #", col = "Body Site")
+gg_pcoa <- plot_ordination(ms_rare, pcoa_bc, color = "asthma", shape="disease_course") +
+  labs(pch="Disease Status", col = "Asthma")+
+  theme_minimal()
 gg_pcoa
 
 ggsave("plot_pcoa.png"

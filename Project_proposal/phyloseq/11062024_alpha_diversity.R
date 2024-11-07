@@ -1,7 +1,6 @@
-library(phyloseq)
-library(ape)
 library(tidyverse)
 library(picante)
+
 
 #### Alpha diversity ######
 plot_richness(ms_rare)
@@ -15,9 +14,14 @@ phylo_dist <- pd(t(otu_table(ms_rare)), phy_tree(ms_rare),
 
 # add PD to metadata table
 sample_data(ms_rare)$PD <- phylo_dist$PD
+sample_data(ms_rare)
+
+sample_data(ms_rare)$group <- paste(sample_data(ms_rare)$disease_course, sample_data(ms_rare)$asthma, sep = "_")
+
 
 # Extract the grouping variable from sample data
 group_info <- sample_data(ms_rare)$group  # Replace 'group' with your actual grouping variable
+
 
 # Create a data frame with Faith's PD and the group info
 faith_pd_df <- data.frame(PD = sample_data(ms_rare)$PD, group = group_info)
@@ -50,6 +54,7 @@ ggsave("plot_pd.png", width = 8, height = 6, dpi = 300)
 
 # Extract group information from the sample data (e.g., disease status, treatment, etc.)
 group_info <- sample_data(ms_rare)$group  # Adjust "group" to your actual variable
+group_info
 
 # Create a data frame combining Faith's PD and group information
 faith_pd_df <- data.frame(faith_pd = faith_pd_values, group = group_info)
@@ -77,7 +82,7 @@ alpha_diversity_plot <- ggplot(alpha_diversity, aes(x = group, y = Shannon)) +
   labs(title = "Alpha Diversity by Group (Shannon Index)",
        x = "Group", 
        y = "Shannon Diversity") +
-  theme_classic() +
+  theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels if needed
 alpha_diversity_plot
 
