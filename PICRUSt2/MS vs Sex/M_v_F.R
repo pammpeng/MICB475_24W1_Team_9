@@ -1,4 +1,4 @@
-##### MS vs Sex #####
+##### Male vs Female #####
 
 
 # If you don't have BiocManager, here is the code to install it
