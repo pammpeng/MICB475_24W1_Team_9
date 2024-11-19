@@ -11,10 +11,13 @@ bc_dm <- distance(ms_rare, method="bray")
 
 pcoa_bc <- ordinate(ms_rare, method="PCoA", distance=bc_dm)
 
-plot_ordination(ms_rare, pcoa_bc, color = "disease_course", shape="asthma")
+head(sample_data(ms_rare))
+
+plot_ordination(ms_rare, pcoa_bc, color = "group")
 
 gg_pcoa <- plot_ordination(ms_rare, pcoa_bc, color = "disease_course", shape="asthma") +
-  labs(pch="MS Status", col = "Asthma Status")
+  labs(pch="Asthma Status", col = "MS Status")+
+  stat_ellipse(aes(group = group), level = 0.95) 
 gg_pcoa
 
 
