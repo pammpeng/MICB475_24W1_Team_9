@@ -32,7 +32,7 @@ head(sample_data(ms_rare))
 # Plot again with updated group labels
 plot_bar(ms_phylum, fill="Phylum") + 
   facet_wrap(.~group, scales = "free_x") +
-  theme_minimal() +
+  theme_classic() +
   theme(axis.text.x = element_blank())
 
 ggsave("plot_taxonomy.png"

@@ -30,22 +30,51 @@ sample_data(ms_rare)$group <- paste(sample_data(ms_rare)$disease_course, sample_
 
 # Extract the grouping variable from sample data
 group_info <- sample_data(ms_rare)$group  # Replace 'group' with your actual grouping variable
-
+group_info
 
 # Create a data frame with Faith's PD and the group info
 faith_pd_df <- data.frame(PD = sample_data(ms_rare)$PD, group = group_info)
 
 # Check the first few rows of the data frame
 head(faith_pd_df)
-faith_pd_df
 #Change group names
 sample_data(ms_rare)$group <- gsub("Control_0", "Healthy", sample_data(ms_rare)$group)
 sample_data(ms_rare)$group <- gsub("Control_1", "Asthma", sample_data(ms_rare)$group)
 sample_data(ms_rare)$group <- gsub("RRMS_0", "MS", sample_data(ms_rare)$group)
 sample_data(ms_rare)$group <- gsub("RRMS_1", "MS + Asthma", sample_data(ms_rare)$group)
 
+# Extract the sample metadata from ms_rare
+sample_metadata <- sample_data(ms_rare)
+
+# Select the desired columns
+new_faiths <- sample_metadata[, c("PD", "disease_course", "asthma")]
+
+# View the new data frame
+head(new_faiths)
+
 sample_data(ms_rare)
 
+head(new_faiths)
+class(new_faiths)
+new_faiths$PD <- as.numeric(new_faiths$PD)
+new_faiths$disease_course <- factor(new_faiths$disease_course)
+new_faiths$asthma <- factor(new_faiths$asthma)
+
+#perform PERMANOVA test for multiple categorical variables
+new_faiths
+new_faiths <- data.frame(sample_data(new_faiths))
+permanova_result <- adonis2(PD ~ disease_course * asthma, data = new_faiths, permutations = 999)
+head(new_faiths)
+
+colnames(new_faiths)
+
+names(new_faiths)
+permanova_result <- adonis2(as.formula("PD ~ disease_course * asthma"), data = new_faiths, permutations = 999)
+
+# View the result
+permanova_result
+
+new_faiths <- data.frame(sample_data(new_faiths))
 # Perform Kruskal-Wallis test to compare PD across groups
 kruskal_test_result <- kruskal.test(PD ~ group, data = faith_pd_df)
 
@@ -57,7 +86,7 @@ plot.pd <- ggplot(sample_data(ms_rare), aes(group, PD), fill = group) +
   geom_boxplot() +
   xlab("Group") +
   ylab("Phylogenetic Diversity")+
-  theme_minimal() +
+  theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
 
@@ -88,7 +117,8 @@ alpha_diversity <- estimate_richness(ms_rare, measures = c("Shannon", "Chao1"))
 # Add the 'group' variable to the alpha diversity data
 alpha_diversity$group <- sample_data(ms_rare)$group
 
-
+new_faiths <- data.frame(sample_data(new_faiths))
+class(new_faiths)
 
 alpha_diversity$group <- gsub("Control 0", "Healthy", alpha_diversity$group)
 alpha_diversity$group <- gsub("Control 1", "Asthma", alpha_diversity$group)
@@ -103,10 +133,11 @@ alpha_diversity_plot <- ggplot(alpha_diversity, aes(x = group, y = Shannon)) +
   labs(title = "Alpha Diversity by Group (Shannon Index)",
        x = "Group", 
        y = "Shannon Diversity") +
-  theme_minimal() +
+  theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))+ # Rotate x-axis labels if needed
   stat_compare_means(method = "kruskal.test", label = "p.signif")
 alpha_diversity_plot
+ggsave("alpha_diversity_plot.png", width = 8, height = 6, dpi = 300)
 
 # Run a Kruskal-Wallis test for Shannon diversity
 kruskal.test(Shannon ~ group, data = alpha_diversity)
