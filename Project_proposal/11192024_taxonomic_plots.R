@@ -46,13 +46,21 @@ library(vegan)
 
 # Check the Bray-Curtis distance matrix
 otu_table_matrix <- as.matrix(otu_table(ms_rare))
+
+# Convert the otu_table to a matrix
+otu_table_matrix <- as(otu_table(ms_rare), "matrix")
 bray_dist <- vegdist(t(otu_table_matrix), method = "bray")
 bray_dist
+dat <- data.frame(sample_data(ms_rare))
+
 # Ensure the dimensions of the Bray-Curtis distance matrix match the number of samples
 dim(bray_dist)
 
 # Run PERMANOVA using adonis2
-adonis_result <- adonis2(bray_dist ~ group, data = sample_df)
+adonis_result <- adonis2(bray_dist ~ disease_course*asthma, data = dat)
 
-# Print the result
+# Print the result# Print the resultsample_df_dim
 print(adonis_result)
+
+
+
