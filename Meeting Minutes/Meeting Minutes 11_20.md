@@ -11,6 +11,7 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 - DESEq2 analysis feedback
 -   Ancom help, code failing (error= null)
 - Alpha beta diversity Results by Tia
+- Core Microbiome by Claire
 
 Google Doc with the images: https://docs.google.com/document/d/1yV2v-xm3Y2zUjSDU6DhI1xWOvH8VZ7FDswyeJf18VB8/edit?usp=sharing
 
