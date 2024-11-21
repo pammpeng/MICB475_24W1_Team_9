@@ -21,19 +21,12 @@ plot_bar(ms_phylum, fill="Phylum") +
 
 gg_taxa <- plot_bar(ms_phylum, fill="Phylum") + 
   facet_wrap(.~group, scales = "free_x")+
-  theme_minimal()+
-  theme(axis.text.x = element_blank())
+  theme_classic()+
+  theme(axis.text.x = element_blank())+
+  theme(axis.ticks.x = element_blank())+
+  scale_fill_brewer(palette = "Set3") 
 gg_taxa
 
-sample_data(ms_rare)$group
-
-head(sample_data(ms_rare))
-
-# Plot again with updated group labels
-plot_bar(ms_phylum, fill="Phylum") + 
-  facet_wrap(.~group, scales = "free_x") +
-  theme_classic() +
-  theme(axis.text.x = element_blank())
 
 ggsave("plot_taxonomy.png"
        , gg_taxa

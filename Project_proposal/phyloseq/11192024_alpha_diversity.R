@@ -177,7 +177,7 @@ simpson_plot <- ggplot(alpha_diversity, aes(x = group, y = Simpson)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 simpson_plot
 
-ggsave("fisher_plot.png", width = 8, height = 6, dpi = 300)
+ggsave("simpson_plot.png", width = 8, height = 6, dpi = 300)
 
 # Run a Kruskal-Wallis test for Shannon diversity
 kruskal.test(Simpson ~ group, data = alpha_diversity)
