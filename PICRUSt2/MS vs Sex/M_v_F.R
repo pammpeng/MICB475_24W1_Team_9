@@ -111,8 +111,8 @@ View(res_desc)
 
 # Filter to only include significant pathways
 sig_res = res_desc %>%
-  filter(pvalue < 0.05)
-# You can also filter by Log2fold change
+  filter(pvalue < 0.05 & log2FoldChange > -1.5 & log2FoldChange < 1.5)
+ # You can also filter by Log2fold change
 
 sig_res <- sig_res[order(sig_res$log2FoldChange),]
 sig_res2<- ggplot(data = sig_res, aes(y = reorder(description, sort(as.numeric(log2FoldChange))), x= log2FoldChange, fill = pvalue))+
