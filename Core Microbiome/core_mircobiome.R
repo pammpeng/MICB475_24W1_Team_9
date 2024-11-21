@@ -54,10 +54,14 @@ venn_minus_Asthma <- ggVennDiagram(x = condition_list_minus_asthma) + theme(
   plot.background = element_rect(
     fill = "white",
     colour = "white"))
-venn_MS_asthmavsno <- ggVennDiagram(x = condition_list_MS_asthmavsno) + coord_flip()
+venn_MS_asthmavsno <- ggVennDiagram(x = condition_list_MS_asthmavsno) + coord_flip() + theme(
+  plot.background = element_rect(
+    fill = "white",
+    colour = "white"))
 
 # Save Venn diagrams
 ggsave("venn_all.png", venn_all, height = 6, width = 10)
 ggsave("venn_MS_vs_Control.png", venn_MSvsControl, height = 6, width = 8)
 ggsave("venn_MS_Asthma_vs_Control.png", venn_MSAsthmavsControl, height = 6, width = 8)
 ggsave("venn_minus_Asthma.png", venn_minus_Asthma)
+ggsave("ven_MS.png", venn_MS_asthmavsno)
