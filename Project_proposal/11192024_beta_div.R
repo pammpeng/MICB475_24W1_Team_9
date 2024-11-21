@@ -16,7 +16,7 @@ head(sample_data(ms_rare))
 plot_ordination(ms_rare, pcoa_bc, color = "group")
 
 gg_pcoa <- plot_ordination(ms_rare, pcoa_bc, color = "group") +
-  labs(pch="Asthma Status", col = "MS Status")
+  labs(pch="Asthma Status", col = "Health Status")
 gg_pcoa
 
 
