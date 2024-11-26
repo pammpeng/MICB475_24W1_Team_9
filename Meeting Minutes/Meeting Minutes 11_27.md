@@ -14,12 +14,14 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 - significant differences in evenness
 
 ## Core microbiome: 
-- Asthma MS- most unique -> genus composition
-- control + MS has same results as Control + asthma?
+- control group has the most unique ASVs
+- highest degree of overlap in composition between MS and MS_Asthma
+- control vs MS has the same overlap as control vs asthma
 - MS_Asthma vs Control = 62%
 - Asthma vs Control = 71%
 - MS vs Control = 71%
 - MS vs MS_asthma = 78%
+- **overall MS masks the effects of asthma but asthma still plays a role?**
 
 ## DESEQ
 - **asthma/MS vs MS 11 up 11 down. had greatest difference in up/down regulated genes.**
