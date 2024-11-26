@@ -19,7 +19,7 @@ control <- subset_samples(MS_RA, `Condition`=="Control")
 asthma_noMS <- subset_samples(MS_RA, `Condition`=="Asthma")
 
 # Determining ASVs present in 50% of samples 
-asthma_MS_ASVs <- core_members(asthma_MS, detection=0.01, prevalence = 0.5)
+asthma_MS_ASVs <- core_members(asthma_MS, detection=0.001, prevalence = 0.5)
 noasthma_MS_ASVs <- core_members(noasthma_MS, detection=0.001, prevalence = 0.5)
 control_ASVs <- core_members(control, detection=0.001, prevalence = 0.5)
 asthma_noMS_ASVs <- core_members(asthma_noMS, detection=0.001, prevalence = 0.5)
@@ -36,6 +36,8 @@ condition_list_MSvsControl <- list(Control = control_ASVs,MS = noasthma_MS_ASVs)
 condition_list_MSAsthmavsControl <- list(Control = control_ASVs,Asthma_MS = asthma_MS_ASVs)
 condition_list_minus_asthma <- list(Control = control_ASVs,Asthma_MS = asthma_MS_ASVs, MS = noasthma_MS_ASVs)
 condition_list_MS_asthmavsno <- list(Asthma_MS = asthma_MS_ASVs, MS = noasthma_MS_ASVs)
+condition_list_controlvsasthma <- list(Control = control_ASVs, Asthma = asthma_noMS_ASVs)
+condition_list_asthmavsasmtha_MS <- list(Asthma = asthma_noMS_ASVs, Asthma_MS = asthma_MS_ASVs)
 
 # Create a Venn diagrams 
 venn_all <- ggVennDiagram(x = condition_list_all) + theme(
@@ -58,6 +60,14 @@ venn_MS_asthmavsno <- ggVennDiagram(x = condition_list_MS_asthmavsno) + coord_fl
   plot.background = element_rect(
     fill = "white",
     colour = "white"))
+venn_controlvsasthma <- ggVennDiagram(x = condition_list_controlvsasthma) + coord_flip() + theme(
+  plot.background = element_rect(
+    fill = "white",
+    colour = "white"))
+venn_asthmavsasthma_MS <- ggVennDiagram(x = condition_list_asthmavsasmtha_MS) + coord_flip() + theme(
+  plot.background = element_rect(
+    fill = "white",
+    colour = "white"))
 
 # Save Venn diagrams
 ggsave("venn_all.png", venn_all, height = 6, width = 10)
@@ -65,3 +75,4 @@ ggsave("venn_MS_vs_Control.png", venn_MSvsControl, height = 6, width = 8)
 ggsave("venn_MS_Asthma_vs_Control.png", venn_MSAsthmavsControl, height = 6, width = 8)
 ggsave("venn_minus_Asthma.png", venn_minus_Asthma)
 ggsave("ven_MS.png", venn_MS_asthmavsno)
+ggsave("ven_control_vs_asthma.png", venn_controlvsasthma)
