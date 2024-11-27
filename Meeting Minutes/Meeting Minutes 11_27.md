@@ -42,6 +42,6 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 
 <img width="425" alt="Screenshot 2024-11-25 at 5 36 55 PM" src="https://github.com/user-attachments/assets/b4fb01fc-3aaa-4bc7-83ee-684a62aed455">
 
-## Hypothetical Narrative
-- Ms_Asthma vs MS =similar, MS masks the effects of asthma.
+## Proposed Narrative
+- MS is potentially masking the effects of asthma due to similarities in MS+Asthma vs MS comparisons
 
