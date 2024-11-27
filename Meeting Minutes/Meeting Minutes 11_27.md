@@ -44,4 +44,5 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 
 ## Proposed Narrative
 - MS is potentially masking the effects of asthma due to similarities in MS+Asthma vs MS comparisons
+https://docs.google.com/document/d/1yV2v-xm3Y2zUjSDU6DhI1xWOvH8VZ7FDswyeJf18VB8/edit?usp=sharing
 
