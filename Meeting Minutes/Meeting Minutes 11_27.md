@@ -24,13 +24,18 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 - **overall MS masks the effects of asthma but asthma still plays a role?**
 
 ## DESEQ
-- **asthma/MS vs MS 11 up 11 down. had greatest difference in up/down regulated genes.**
-- **Asthma vs Control 3 up 17 down. has a big difference**
-- MS vs Control 10 up 10 down
-- Asthma_MS vs Control 9 up 11 down
-- **Asthma vs MS 4 up 16 down**
-- Look at the role of specific genera to see in literature
-- Annie having difficulty with ANCOM, needs assistance, will send Hans her code
+- MS vs Control: 15 decrease, 8 increase
+- Asthma vs Control: 27 decrease, 6 increase
+- MS+Asthma vs Control: 19 decrease, 9 increase
+- MS+Asthma vs MS: 13 decrease, 10 increase
+- MS+Asthma vs Asthma: 5 decrease, 18 increase
+- MS vs Asthma: 8 decrease, 19 increase
+- Perform lit search to investigate role of specific genera?
+
+## ALDEx2
+- Blautia more abundant in asthma vs control group, but less abundant in MS vs Asthma and MS+Asthma vs Asthma
+- Romboutsia is even less abundant in MS+Asthma vs Asthma compared to MS vs Control and MS+Asthma vs Control
+- No graph generated for MS_asthma_vs_MS as there were no genera that were significantly different between the two groups
 
 ## Picrust2
 - MS_Asthma is most clustered, does that mean they are more similar? less diverse?
