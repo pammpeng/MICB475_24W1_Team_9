@@ -1,7 +1,7 @@
 library(tidyverse)
 
 ## reconciling manifest based on filtered metadata
-ms_metadata_final<- read_tsv("ms_metadata_final.tsv")
+ms_metadata_final<- read_tsv("ms_metadata_filtered.tsv")
 ms_manifest<-read_tsv("ms_manifest.tsv")
 
 # taking only the sample-id column
@@ -11,5 +11,5 @@ filtered_metadata_only_samples <- select(ms_metadata_final, `sample-id`)
 filtered_manifest <- left_join(filtered_metadata_only_samples, ms_manifest)
 
 # exporting the filtered_manifest to a TSV file
-filtered_manifest_filepath <- "filtered_ms_manifest_2.tsv"
+filtered_manifest_filepath <- "_ms_manifest_filtered.tsv"
 write_tsv(filtered_manifest, filtered_manifest_filepath)

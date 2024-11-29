@@ -11,7 +11,7 @@ ms_data
 #filtering for healthy and asthma
 
 #Selecting for MS and asthma
-selected <- select(ms_data, sample-id, disease_course, asthma)
+selected <- select(ms_data, "sample-id", "disease_course", "asthma")
 selected
 
 #filtering for healthy and asthma
@@ -74,5 +74,5 @@ ms_final_dat <- full_join(rrms_asthma, rrms_no_asthma) %>%
   full_join(healthy_no_asthma)
   
 #export the final data frame as a tsv file and a csv file
-write_delim(ms_final_dat, "ms_metadata_final.tsv", delim = "\t")
+write_delim(ms_final_dat, "ms_metadata_filtered.tsv", delim = "\t")
 
