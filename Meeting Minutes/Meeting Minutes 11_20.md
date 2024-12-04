@@ -34,7 +34,3 @@ Conclusions:
 - Asthma affects only healthy patients
 - MS masks effects of all other aspects like asthma
 - Make summary key points for each figures
-
-
-Google Doc with the images: https://docs.google.com/document/d/1yV2v-xm3Y2zUjSDU6DhI1xWOvH8VZ7FDswyeJf18VB8/edit?usp=sharing
-
