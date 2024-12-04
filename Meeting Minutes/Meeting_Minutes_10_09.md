@@ -4,7 +4,7 @@
 October 9th, 2024
 
 ## Location:
-Zoom: https://ubc.zoom.us/j/67359231965?pwd=1QOWWuFTTjXQcla2T32GQ5MoyAUHhG.1
+Zoom
 
 ## Participants:
 Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
