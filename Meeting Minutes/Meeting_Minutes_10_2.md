@@ -17,8 +17,6 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng
    - Use R to wrangle data on local computer (manifest) then make new files for server (qiime)
    - Summarize sample sizes first (tabulate how many sample sizes for each condition)
    - Put all code on Github now, annotate code properly with comments!!
-
-Link to document with possible datasets: https://docs.google.com/document/d/1yV2v-xm3Y2zUjSDU6DhI1xWOvH8VZ7FDswyeJf18VB8/edit?usp=sharing
 3. Brainstorm/narrow down research question
   - Is the microbiome a mediator of the increased prevalence of Asthma in patients with MS compared to the general public?
 4. Meeting online next week!
