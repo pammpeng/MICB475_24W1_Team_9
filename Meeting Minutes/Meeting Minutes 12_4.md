@@ -16,5 +16,12 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
 - MS is restoring diversity, seen also in the DeSeq
 - presenting the DeSeq as a ratio of increase to decrease
 - MS seems to have a restoring effect on the decrease caused by asthma 
- https://docs.google.com/document/d/10K1HSS-IMdtHUL5ZINmN8a3J26CAcC_bARtn6QqeXe0/edit?usp=sharing
- 
+ - discussion the contriditing evidence in the discussion section
+ - we are leading towards the side that there is no influence on the microbiome
+ - can still discussion the shared genera
+ - still discussion the pie crust, there is also no functional differences 
+ - diseases effect the microbiome in different ways
+ - could be balancing each other out with functional redundency
+ - ## there is not an effect on the microbiome
+ - Pam gets to include her PcoA plot!!!!!! (cause it shows there is nothing)
+ - move the table to sup and put figure 4 as PcoA plot
