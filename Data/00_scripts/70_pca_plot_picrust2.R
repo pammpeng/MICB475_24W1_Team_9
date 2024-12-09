@@ -102,5 +102,6 @@ abundance_desc$feature = abundance_desc$description
 abundance_desc = abundance_desc[,-c(151:ncol(abundance_desc))] 
 
 # Generate pathway PCA plot
-pathway_pca(abundance = abundance_data_filtered %>% column_to_rownames("#OTU ID"), metadata = metadata_as, group = "disease_var")
+pcaplot<- pathway_pca(abundance = abundance_data_filtered %>% column_to_rownames("#OTU ID"), metadata = metadata_as, group = "disease_var")
 
+ggsave("pcoa_plot.png", plot = pcaplot)
