@@ -48,16 +48,16 @@ metadata <- read_xlsx("ms_metadata.xlsx")
 metadata <- metadata |>
   mutate(disease_var = case_when(disease=='MS' & asthma==0 ~ 'MS',
                                  disease=='MS' & asthma==1 ~ 'MS_asthma',
-                                 disease=='Control' ~ 'Control'))
+                                 disease=='Control' & asthma==1 ~ 'Asthma',
+                                 disease=='Control' ~ 'Healthy'))
 
-#Example Looking at subject number
-#If you have multiple variants, filter your metadata to include only 2 at a time
+
 
 #Remove NAs for your column of interest in this case subject
 
 # filtering to asthma and MS group
 metadata_as = metadata[!is.na(metadata$disease_var),] |>
-  filter(disease_var == c('MS', 'MS_asthma'))
+  filter(disease_var == c('MS', 'MS_asthma', 'Healthy', 'Asthma'))
 
 #Filtering the abundance table to only include samples that are in the filtered metadata
 sample_names = metadata_as$'sample-id'
@@ -101,41 +101,6 @@ abundance_desc$feature = abundance_desc$description
 # 151 because we have 152 cols (inc OTU ID) in our abundance data filtered file
 abundance_desc = abundance_desc[,-c(151:ncol(abundance_desc))] 
 
-# Generate a heatmap
-heatmap <- pathway_heatmap(abundance = abundance_desc %>% column_to_rownames("feature"), metadata = metadata_as, group = "disease_var")
-
 # Generate pathway PCA plot
 pathway_pca(abundance = abundance_data_filtered %>% column_to_rownames("#OTU ID"), metadata = metadata_as, group = "disease_var")
-
-# Generating a bar plot representing log2FC from the custom deseq2 function
-
-# Go to the Deseq2 function script and update the metadata category of interest
-
-# Lead the function in
-source("DESeq2_function.R")
-
-# Run the function on your own data
-res =  DEseq2_function(abundance_data_filtered, metadata, "subject")
-res$feature =rownames(res)
-res_desc = inner_join(res,metacyc_daa_annotated_results_df, by = "feature")
-res_desc = res_desc[, -c(8:13)]
-View(res_desc)
-
-# Filter to only include significant pathways
-sig_res = res_desc %>%
-  filter(pvalue < 0.05)
-# You can also filter by Log2fold change
-
-sig_res <- sig_res[order(sig_res$log2FoldChange),]
-ggplot(data = sig_res, aes(y = reorder(description, sort(as.numeric(log2FoldChange))), x= log2FoldChange, fill = pvalue))+
-  geom_bar(stat = "identity")+ 
-  theme_bw()+
-  labs(x = "Log2FoldChange", y="Pathways")
-
-
-
-#############################
-abundance <- abundance_desc %>% column_to_rownames("feature")
-str(abundance)
-
 
