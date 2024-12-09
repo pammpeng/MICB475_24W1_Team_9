@@ -15,5 +15,5 @@ qiime picrust2 full-pipeline \
   --p-max-nsti 2 \
   --verbose
 
-2 of 2754 ASVs were above the max NSTI cut-off of 2.0 and were removed from the downstream analyses.
+#2 of 2754 ASVs were above the max NSTI cut-off of 2.0 and were removed from the downstream analyses.
 
