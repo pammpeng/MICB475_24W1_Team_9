@@ -12,32 +12,24 @@ install.packages("ggpubr", dependencies = TRUE)
 library(ggpubr)
 
 #### Alpha diversity ######
-plot_richness(ms_rare)
+plot_richness(Pms_rare)
 
 # -------------------- Preparing Dataframe for alpha diversity plots --------------------
 
 # Extract the grouping variable from sample data
-group_info <- sample_data(ms_rare)$group
-
-#Change group names
-sample_data(ms_rare)$group <- gsub("Control_0", "Healthy", sample_data(ms_rare)$group)
-sample_data(ms_rare)$group <- gsub("Control_1", "Asthma", sample_data(ms_rare)$group)
-sample_data(ms_rare)$group <- gsub("RRMS_0", "MS", sample_data(ms_rare)$group)
-sample_data(ms_rare)$group <- gsub("RRMS_1", "MS + Asthma", sample_data(ms_rare)$group)
-#view updated names
-sample_data(ms_rare)
+group_info <- sample_data(Pms_rare)$group
 
 #make both disease_course and asthma columns have factors as variables
-sample_data(ms_rare)$disease_course <- as.factor(sample_data(ms_rare)$disease_course)
-sample_data(ms_rare)$asthma <- as.factor(sample_data(ms_rare)$asthma)
-sample_data(ms_rare)$group <- as.factor(sample_data(ms_rare)$group)
+sample_data(Pms_rare)$disease_course <- as.factor(sample_data(Pms_rare)$disease_course)
+sample_data(Pms_rare)$asthma <- as.factor(sample_data(Pms_rare)$asthma)
+sample_data(Pms_rare)$group <- as.factor(sample_data(Pms_rare)$group)
 
 # -------------------- Alpha Diversity --------------------
 # Calculate alpha diversity
-alpha_diversity <- estimate_richness(ms_rare, measures = c("Shannon", "Chao1", "Observed", "Ace", "Simpson", "Fisher"))
+alpha_diversity <- estimate_richness(Pms_rare, measures = c("Shannon", "Chao1", "Observed", "Ace", "Simpson", "Fisher"))
 
 # Add the 'group' variable to the alpha diversity data
-alpha_diversity$group <- sample_data(ms_rare)$group
+alpha_diversity$group <- sample_data(Pms_rare)$group
 
 #rename groups
 alpha_diversity$group <- gsub("Control_0", "Healthy", alpha_diversity$group)
