@@ -31,6 +31,7 @@ metadata <- metadata |>
 
 
 #Remove NAs for your column of interest in this case subject
+metadata = metadata[!is.na(metadata$disease),]
 
 # filtering to include all 4 groups
 metadata_as = metadata[!is.na(metadata$disease_var),] |>
