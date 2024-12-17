@@ -1,3 +1,5 @@
+# Purpose: The purpose of the script is to perform picrust2 functional analysis between the MS v/s asthma groups
+
 #### Load packages ####
 # Load all necessary libraries
 library(readr)
@@ -17,7 +19,7 @@ abundance_data <- read_delim(abundance_file, delim = "\t", col_names = TRUE, tri
 abundance_data  =as.data.frame(abundance_data) %>% 
   rename('#OTU ID' = 'pathway')
 
-#Import your metadata file, no need to filter yet
+#Importing metadata file
 metadata <- read_delim("ms_metadata.tsv")
 
 # creating a new column with the variables (MS w/ Ashtma, MS w/o asthma, controls)
@@ -27,14 +29,12 @@ metadata <- metadata |>
                              disease_course=='Control' & asthma==0 ~ 'Control',
                              disease_course=='Control' & asthma==1 ~ 'Control_asthma'))
 
-#Example Looking at subject number
-#If you have multiple variants, filter your metadata to include only 2 at a time
 
 #Filtering for variables of interest
 metadata <- metadata %>% 
   filter(disease == c('MS', 'Asthma'))
 
-#Remove NAs for your column of interest in this case subject
+#Remove NAs for your column of interest in this case disease
 metadata = metadata[!is.na(metadata$disease),]
 
 #Filtering the abundance table to only include samples that are in the filtered metadata
@@ -91,20 +91,21 @@ pathway_pca(abundance = abundance_data_filtered %>% column_to_rownames("pathway"
 # Lead the function in
 source("DESeq2_function.R")
 
-# Run the function on your own data
+# Run the function on your our data
 res =  DEseq2_function(abundance_data_filtered, metadata, "disease")
 res$feature =rownames(res)
 res_desc = inner_join(res,metacyc_daa_annotated_results_df, by = "feature")
 res_desc = res_desc[, -c(8:13)]
 View(res_desc)
 
-# Filter to only include significant pathways
+# Filter to only include significant pathways and log2fold change
 sig_res = res_desc %>%
   filter(padj < 0.05,
          !between(log2FoldChange,-1.5, 1.5))
-# You can also filter by Log2fold change
 
+# generating data table for bar plot
 sig_res <- sig_res[order(sig_res$log2FoldChange),]
+# generating bar plot for differential expression
 ggplot(data = sig_res, aes(y = reorder(description, sort(as.numeric(log2FoldChange))), x= log2FoldChange, fill = pvalue))+
   geom_bar(stat = "identity")+ 
   theme_bw()+
