@@ -7,24 +7,24 @@ library(ggplot2)
 library(ggsignif)
 
 #### Beta diversity #####
-bc_dm <- distance(ms_rare, method="bray")
+bc_dm <- distance(Pms_rare, method="bray")
 # check which methods you can specify
 ?distance
 
-pcoa_bc <- ordinate(ms_rare, method="PCoA", distance=bc_dm)
+pcoa_bc <- ordinate(Pms_rare, method="PCoA", distance=bc_dm)
 
-beta_diversity <- (sample_data(ms_rare))
+beta_diversity <- (sample_data(Pms_rare))
 
-plot_ordination(ms_rare, pcoa_bc, color = "group")
+plot_ordination(Pms_rare, pcoa_bc, color = "group")
 
 #rename groups
-sample_data(ms_rare)$group <- gsub("Control_0", "Healthy", sample_data(ms_rare)$group)
-sample_data(ms_rare)$group <- gsub("Control_1", "Asthma", sample_data(ms_rare)$group)
-sample_data(ms_rare)$group <- gsub("RRMS_0", "MS", sample_data(ms_rare)$group)
-sample_data(ms_rare)$group <- gsub("RRMS_1", "MS + Asthma", sample_data(ms_rare)$group)
+sample_data(Pms_rare)$group <- gsub("Control_0", "Healthy", sample_data(Pms_rare)$group)
+sample_data(Pms_rare)$group <- gsub("Control_1", "Asthma", sample_data(Pms_rare)$group)
+sample_data(Pms_rare)$group <- gsub("RRMS_0", "MS", sample_data(Pms_rare)$group)
+sample_data(Pms_rare)$group <- gsub("RRMS_1", "MS + Asthma", sample_data(Pms_rare)$group)
 
 
-gg_pcoa<- plot_ordination(ms_rare, pcoa_bc, color = "group") +
+gg_pcoa<- plot_ordination(Pms_rare, pcoa_bc, color = "group") +
   stat_ellipse(aes(fill = group), 
                geom = "polygon", 
                alpha = 0,  
@@ -43,7 +43,7 @@ ggsave("plot_pcoa.png"
        , gg_pcoa
        , height=4, width=5)
 
-gg_pcoa_ms <- plot_ordination(ms_rare, pcoa_bc, color = "disease_course") +
+gg_pcoa_ms <- plot_ordination(Pms_rare, pcoa_bc, color = "disease_course") +
   stat_ellipse(aes(fill = disease_course), 
                geom = "polygon", 
                alpha = 0,  
@@ -64,8 +64,8 @@ pcoa_result <- cmdscale(bc_dm , k = 2)  # k = 2 for two principal coordinates
 pcoa_df <- data.frame(pcoa_result)
 
 # Add the categorical variables to the data frame
-pcoa_df$disease_course <- factor(sample_data(ms_rare)$disease_course)
-pcoa_df$asthma <- factor(sample_data(ms_rare)$asthma)
+pcoa_df$disease_course <- factor(sample_data(Pms_rare)$disease_course)
+pcoa_df$asthma <- factor(sample_data(Pms_rare)$asthma)
 
 # Check the structure of the data
 head(pcoa_df)
@@ -95,25 +95,25 @@ ggsave("plot_pcoa_2.png"
        , height=4, width=5)
 
 # Extract the distance matrix (e.g., Bray-Curtis)
-dist_matrix <- distance(ms_rare, method = "bray")
+dist_matrix <- distance(Pms_rare, method = "bray")
 
 # Extract the grouping variable from sample_data
-asthma <- sample_data(ms_rare)$asthma  # Replace 'group' with your actual grouping variable name
+asthma <- sample_data(Pms_rare)$asthma  # Replace 'group' with your actual grouping variable name
 
 # Perform PerMANOVA using adonis2 (since adonis is deprecated)
 permanova_result <- adonis2(dist_matrix ~ asthma)
 
 
-dm_braycurtis <- vegdist(t(otu_table(ms_rare)), method="bray")  # Bray-Curtis distance
-dat <- as.data.frame(sample_data(ms_rare))
+dm_braycurtis <- vegdist(t(otu_table(Pms_rare)), method="bray")  # Bray-Curtis distance
+dat <- as.data.frame(sample_data(Pms_rare))
 dm_braycurtis
 
 
 dat$disease_course <- as.factor(dat$disease_course)
 class(dat$asthma)
 class(dat$disease_course)
-class(get_sample(ms_rare))
-ms_df <- as_data_frame(get_sample(ms_rare))
+class(get_sample(Pms_rare))
+ms_df <- as_data_frame(get_sample(Pms_rare))
 ms_df
 adonis2(dm_braycurtis ~ disease_course*asthma, data=dat)                         
 
@@ -123,7 +123,7 @@ class(dat)
 
 # Make dat into a dataframe
 class(dat)  
-dat <- data.frame(sample_data(ms_rare))
+dat <- data.frame(sample_data(Pms_rare))
 class(dat)
 
 # make 'disease_course' and 'asthma' into factors
