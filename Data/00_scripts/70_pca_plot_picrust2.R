@@ -1,26 +1,3 @@
-##### Install packages #####
-# Start by installing all necessary packages when asked if you want to install
-# from source, please just type Yes in the terminal below
-
-# If you don't have BiocManager, here is the code to install it
-# A lot of you probably already have this so you can skip
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-
-# Create a list of all the packages you need to install
-pkgs <- c("ALDEx2", "SummarizedExperiment", "Biobase", "devtools", 
-          "ComplexHeatmap", "BiocGenerics", "metagenomeSeq", 
-          "Maaslin2", "edgeR", "lefser", "limma", "KEGGREST", "DESeq2")
-
-# Use the above list to install all the packages using a for loop
-for (pkg in pkgs) {
-  if (!requireNamespace(pkg, quietly = TRUE))
-    BiocManager::install(pkg)
-}
-# when asked if you want to update all, some or none please type "n" for none
-
-# After installing all of its above dependencies, install ggpicrust2
-install.packages("ggpicrust2")
 
 #### Load packages ####
 # Load all necessary libraries
@@ -55,7 +32,7 @@ metadata <- metadata |>
 
 #Remove NAs for your column of interest in this case subject
 
-# filtering to asthma and MS group
+# filtering to include all 4 groups
 metadata_as = metadata[!is.na(metadata$disease_var),] |>
   filter(disease_var == c('MS', 'MS_asthma', 'Healthy', 'Asthma'))
 
