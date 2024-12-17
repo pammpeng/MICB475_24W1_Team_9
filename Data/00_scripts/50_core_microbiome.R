@@ -24,16 +24,15 @@ noasthma_MS_ASVs <- core_members(noasthma_MS, detection=0.001, prevalence = 0.5)
 control_ASVs <- core_members(control, detection=0.001, prevalence = 0.5)
 asthma_noMS_ASVs <- core_members(asthma_noMS, detection=0.001, prevalence = 0.5)
 
-# Create lists of the variables to compare 
+# Create a list of all the variables to compare 
 condition_list_all <- list("MS + Asthma" = asthma_MS_ASVs, MS = noasthma_MS_ASVs, 
                             Healthy = control_ASVs, Asthma = asthma_noMS_ASVs)
 
-
-# Create a Venn diagrams 
+# Create a Venn diagram 
 venn_all <- ggVennDiagram(x = condition_list_all) + theme(
   plot.background = element_rect(
     fill = "white",
     colour = "white"))
 
-# Save Venn diagrams
+# Save Venn diagram
 ggsave("core_microbiome_venn.png", venn_all, height = 8, width = 12)
