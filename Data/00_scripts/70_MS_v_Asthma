@@ -30,6 +30,7 @@ metadata <- metadata |>
 #Example Looking at subject number
 #If you have multiple variants, filter your metadata to include only 2 at a time
 
+#Filtering for variables of interest
 metadata <- metadata %>% 
   filter(disease == c('MS', 'Asthma'))
 
