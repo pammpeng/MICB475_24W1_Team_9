@@ -1,4 +1,4 @@
-
+# Purpose: The goal of this script is to perform picrust2 functional analysis between all 4 groups
 #### Load packages ####
 # Load all necessary libraries
 library(readr)
