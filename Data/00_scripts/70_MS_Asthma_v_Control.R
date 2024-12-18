@@ -109,3 +109,9 @@ ggplot(data = sig_res, aes(y = reorder(description, sort(as.numeric(log2FoldChan
   geom_bar(stat = "identity")+ 
   theme_bw()+
   labs(x = "Log2FoldChange", y="Pathways")
+
+# code to get the table for the number of upregulated and downregulated pathways:
+sig_res%>% 
+  mutate(expression = ifelse(log2FoldChange < 0, "DOWN", 'UP')) %>% 
+  group_by(expression) %>% 
+  summarise(count = n())
