@@ -1,4 +1,4 @@
-## Picrust 2 QIIME2 Script
+## Picrust2 QIIME2 Script
 
 # Step 1: Filter features in the feature table based on a minimum frequency
 qiime feature-table filter-features \
