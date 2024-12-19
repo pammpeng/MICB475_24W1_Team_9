@@ -336,6 +336,6 @@ Tia Murdoch, Asmita Jain, Annie Saint, Pamela Peng, Claire Rollins
  - diseases effect the microbiome in different ways
  - could be balancing each other out with functional redundency
  - ## there is not an effect on the microbiome
- - Pam gets to include her PcoA plot!!!!!! (cause it shows there is nothing)
+ - Include PcoA plot(cause it shows there is nothing)
  - move the table to sup and put figure 4 as PcoA plot
 
